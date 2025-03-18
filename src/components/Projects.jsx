@@ -1,0 +1,280 @@
+// import { HERO } from "../constants";
+// import { FaReddit, FaFacebook, FaTwitter, FaLinkedin, FaGithub,  } from "react-icons/fa";
+// import { motion } from "framer-motion";
+// import { CgMail } from "react-icons/cg";
+// import { SiReaddotcv } from "react-icons/si";
+
+// const Hero = () => {
+
+//   return (
+//     <section
+//       id="hero-section"
+//       className="relative flex w-full flex-col items-center justify-center min-h-screen text-center rounded-lg border border-white/20 py-3 backdrop-blur-lg overflow-hidden bg-black/90 text-white shadow-lg grid-bg-hero-light"
+//     >
+
+//       {/* Hero Content */}
+//       <div className="relative w-full md:w-100 z-10 p-10">
+//         <motion.h2
+//           whileInView={{ opacity: 1, y: 0 }}
+//           initial={{ opacity: 0, y: -100 }}
+//           transition={{ duration: 1.5 }}
+//           className="my-8 text-6xl font-bold md:text-4xl lg:text-[5rem]"
+//         >
+//           {HERO.title}
+//         </motion.h2>
+//         <h2 className="my-8 text-1xl font-bold md:text-2xl lg:text-[17px]">
+//           {HERO.username}
+//         </h2>
+//         <p className="p-2 text-3xl tracking-tighter lg:text-4xl">{HERO.greet}</p>
+//         <p className="p-2 text-1xl tracking-tighter lg:text-18px">{HERO.description}</p>
+
+//         {/* Profile + Buttons Box */}
+//         <div className="relative items-center justify-items-center w-full max-w-lg mx-auto mt-8 p-4">
+//           {/* Buttons */}
+//           <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+//             <a
+//               href="/cv.pdf"
+//               download
+//               className="flex items-center px-4 py-2 backdrop-blur-lg text-center rounded-lg hover:scale-105 transition font-medium green text-black hover:bg-white hover:text-black"
+//             >
+//               Explore My CV <SiReaddotcv />
+//             </a>
+//             <a
+//             href="mailto:kaungkhantcoder@gmail.com"
+//             className="flex items-center px-4 py-2 backdrop-blur-lg text-center rounded-lg hover:scale-105 transition font-medium green text-black hover:bg-white hover:text-black"
+//             >
+//                <CgMail /> SEND EMAIL
+//             </a>
+//           </div>
+//         </div>
+
+//         {/* Social Media Icons */}
+//         <div className="flex space-x-6 mt-6 justify-center">
+//           <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-orange-500">
+//             <FaReddit />
+//           </a>
+//           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-600">
+//             <FaFacebook />
+//           </a>
+//           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400">
+//             <FaTwitter />
+//           </a>
+//           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-700">
+//             <FaLinkedin />
+//           </a>
+//           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-500">
+//             <FaGithub />
+//           </a>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
+// import { motion } from "framer-motion";
+
+// const Hero = () => {
+//   // Example projects data (replace with your actual projects)
+//   const projects = [
+//     {
+//       title: "Project 1",
+//       description: "A cool web app built with React and Tailwind.",
+//       link: "https://example.com/project1",
+//     },
+//     {
+//       title: "Project 2",
+//       description: "A mobile-friendly dashboard with real-time data.",
+//       link: "https://example.com/project2",
+//     },
+//     {
+//       title: "Project 3",
+//       description: "An e-commerce site with payment integration.",
+//       link: "https://example.com/project3",
+//     },
+//     {
+//       title: "Project 3",
+//       description: "An e-commerce site with payment integration.",
+//       link: "https://example.com/project3",
+//     },
+//   ];
+
+//   const cardVariants = {
+//     rest: { scale: 1, y: 0 },
+//     hover: { scale: 1.05, y: -10, transition: { duration: 0.3 } },
+//   };
+
+//   return (
+//     <section
+//       id="hero-section"
+//       className="relative flex w-full flex-col items-center justify-center min-h-screen text-center rounded-3xl border border-white/10 py-12 backdrop-blur-lg overflow-hidden bg-black/90 text-white shadow-lg grid-bg-hero-light"
+//     >
+//       {/* Title */}
+//       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+//               {PROJECTS.map((project, index) => (
+//                 <motion.div
+//                   key={project.id}
+//                   className="overflow-hidden p-6 border border-stone-50/30 rounded-lg bg-gradient-to-r from-blue-900/90 to-black/90 backdrop-blur-sm shadow-md mb-5 hover:shadow-lg transition-shadow"
+//                   whileInView={{ opacity: 1, x: 0}}
+//                   initial={{ opacity: 0, x: -100 }}
+//                   transition={{ duration: 1.0, delay: index * 0.1 }}
+//                 >
+//                   {/* Repo Header */}
+//                   <div className="flex items-center gap-3 mb-3">
+//                     <FaGithub className="text-black text-xl" />
+//                     <h3 className="text-lg text-blue-500 font-semibold">{project.name}</h3>
+//                   </div>
+
+//                   {/* Description */}
+//                   <p className="text-black/70 text-sm mb-3">{project.description}</p>
+
+//                   {/* Tech Stack Tags */}
+//                   <div className="flex flex-wrap gap-2 mb-4">
+//                     {project.techStack.map((tech) => (
+//                       <span key={tech} className="bg-blue-700 text-white px-2 py-1 text-xs rounded-md">
+//                         {tech}
+//                       </span>
+//                     ))}
+//                   </div>
+
+//                   {/* Repo Stats (Stars & Forks) */}
+//                   <div className="flex items-center justify-between text-gray-500 text-sm mb-4">
+//                     <div className="flex items-center gap-2">
+//                       <FaStar />
+//                     </div>
+//                     <div className="flex items-center gap-2">
+//                       <FaCodeBranch />
+//                     </div>
+//                   </div>
+
+//                   {/* GitHub Link Button */}
+//                   <a
+//                     href={project.githubLink}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="flex items-center justify-center gap-2 w-full px-4 py-2 mb-2 bg-gray-900 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition"
+//                   >
+//                     <FaGithub />
+//                     View on GitHub
+//                   </a>
+//                   <a
+//                     href={project.githubLink}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="flex items-center justify-center gap-2 w-full px-4 py-2 mb-2 bg-green-600 text-white text-sm font-medium rounded-md hover:bg-gray-700 transition"
+//                   >
+//                     <FaGithub />
+//                     View on Web App
+//                   </a>
+//                 </motion.div>
+//               ))}
+//             </div>
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { projects } from "../constants"; // Ensure this points to index.jsx
+
+const Projects = () => {
+  const [activeTab, setActiveTab] = useState("AI & ML");
+  const [showAll, setShowAll] = useState(false); // Track if all projects are shown
+
+  const tabs = ["AI & ML", "Web", "3D Design", "Circut"];
+
+  const cardVariants = {
+    rest: { opacity: 0.8, scale: 1 },
+    hover: { opacity: 1, scale: 1.03, transition: { duration: 0.3 } },
+  };
+
+  // Limit to 3 projects initially, or show all if showAll is true
+  const displayedProjects = showAll
+    ? projects[activeTab]
+    : projects[activeTab].slice(0, 4);
+
+  return (
+    <section
+      id="projects"
+      className="relative w-full min-full py-16 bg-gradient-to-b from-gray-900 to-black rounded-[35px] text-white overflow-hidden"
+    >
+      {/* Header */}
+      <motion.h1
+        className="text-4xl md:text-5xl font-bold text-center mb-12"
+      >
+        My Projects
+      </motion.h1>
+
+      {/* Tab Bar */}
+      <div className="flex justify-center mb-10">
+        <div className="inline-flex rounded-xl bg-gray-800/50 p-2 border border-gray-700/50 backdrop-blur-sm">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => {
+                setActiveTab(tab);
+                setShowAll(false); // Reset to 3 projects when switching tabs
+              }}
+              className={`px-3 md:px-6 py-2 rounded-xl text-[11px] md:text-sm font-medium transition-colors ${
+                activeTab === tab
+                  ? "bg-white text-black"
+                  : "text-gray-300 hover:text-white hover:bg-gray-700/50"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="max-w-6xl mx-auto px-4">
+        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayedProjects.map((project, index) => (
+            <motion.div
+              key={`${activeTab}-${index}`} // Unique key per tab and index
+              variants={cardVariants}
+              initial="rest"
+              whileHover="hover"
+              className="p-5"
+            >
+              <div className="w-6 h-1 bg-red-500 my-2 justify-start"></div>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-40 object-cover mb-4 rounded-md"
+              />
+              <h3 className="text-lg font-semibold text-white mb-1">{project.title}</h3>
+              <p className="text-sm text-gray-400 mb-1">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-red-500 hover:text-orange-400 text-sm font-medium"
+              >
+                View Project →
+              </a>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* See More / Show Less Button */}
+        {projects[activeTab].length > 4 && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-2 rounded-xl bg-gray-800/50 text-white border border-gray-700/50 hover:bg-gray-700/70 transition-colors text-sm font-medium"
+            >
+              {showAll ? "Show Less" : "See More"}
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
