@@ -1,13 +1,16 @@
 import { FaReddit, FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaPython, FaJava, FaReact } from "react-icons/fa6";
 import { SiJupyter, SiTensorflow, SiOpencv, SiNumpy, SiPandas } from "react-icons/si";
 import { RiJavascriptFill } from "react-icons/ri";
-import { VscVscode } from "react-icons/vsc";
-import { FaGitAlt } from "react-icons/fa";
-import { SiCplusplus, SiStreamlit } from "react-icons/si";
+import { FaGitAlt, FaDocker } from "react-icons/fa";
+import { SiCplusplus, SiStreamlit, SiInternetcomputer } from "react-icons/si";
+import { TbMathSymbols } from "react-icons/tb";
+import { GiMaterialsScience } from "react-icons/gi";
+import { IoTabletPortrait } from "react-icons/io5";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { CgMail } from "react-icons/cg";
+import { MdBusiness } from "react-icons/md";
 
 export const EmailButton = () => {
   const [showNotification, setShowNotification] = useState(false);
@@ -70,7 +73,7 @@ import cert3 from "/src/assets/image.webp"; // Example hackathon win
 
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiDjango, SiMysql, SiFlask } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
@@ -108,28 +111,38 @@ export const SKILLS = [
     { name: "NumPy", icon: SiNumpy },
     { name: "OpenCV", icon: SiOpencv },
     { name: "Pandas", icon: SiPandas },
-    { name: "Jupyter", icon: SiJupyter },
-    { name: "VS Code", icon: VscVscode },
+    { name: "Django", icon: SiDjango },
+    { name: "Flask", icon: SiFlask },
+    { name: "MySQL", icon: SiMysql },
+    { name: "Docker", icon: FaDocker },
+    { name: "Postgresql", icon: BiLogoPostgresql },
     { name: "React", icon: FaReact },
     { name: "Streamlit", icon: SiStreamlit },
     { name: "Git", icon: FaGitAlt },
 ];
 
+import { BsCpuFill, BsRobot } from "react-icons/bs";
+import { MdVolunteerActivism } from "react-icons/md";
+import { GoLaw } from "react-icons/go";
+import { FaChess, FaLaptopCode } from "react-icons/fa";
+import { PiCubeFill } from "react-icons/pi";
+import { LuBrainCircuit } from "react-icons/lu";
+
 export const INTEREST = [
-  { name: "Entrepreneurship", icon: FaPython },
-  { name: "Computer Vision", icon: FaPython},
-  { name: "Mathematics", icon: FaPython},
-  { name: "Physics", icon: FaPython},
-  { name: "IOT", icon: FaPython},
-  { name: "Electronic Circut", icon: FaPython},
-  { name: "Volunteering", icon: FaPython},
-  { name: "Politics", icon: FaPython},
-  { name: "Chess", icon: FaPython},
-  { name: "Rubik's Cube", icon: FaPython},
-  { name: "Robotics", icon: FaPython},
+  { name: "Entrepreneurship", icon: MdBusiness },
+  { name: "Computer Vision", icon: SiInternetcomputer },
+  { name: "Programming", icon: FaLaptopCode},
+  { name: "AI", icon: LuBrainCircuit },
+  { name: "Mathematics", icon: TbMathSymbols },
+  { name: "Physics", icon: GiMaterialsScience },
+  { name: "IOT", icon: IoTabletPortrait },
+  { name: "Electronic Circut", icon: BsCpuFill },
+  { name: "Volunteering", icon: MdVolunteerActivism },
+  { name: "Politics", icon: GoLaw },
+  { name: "Chess", icon: FaChess },
+  { name: "Rubik's Cube", icon: PiCubeFill },
+  { name: "Robotics", icon: BsRobot },
   { name: "3D Design", icon: FaPython},
-  { name: "Programming", icon: FaPython},
-  { name: "NLP", icon: FaPython},
 ];
 export const otherskills = [
   { name: "Communication", icon: FaPython },
