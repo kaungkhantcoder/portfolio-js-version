@@ -199,11 +199,11 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative w-full min-full py-16 bg-gradient-to-b from-gray-900 to-black rounded-[35px] text-white overflow-hidden"
+      className="relative w-screen py-16 text-white overflow-hidden"
     >
       {/* Header */}
       <motion.h1
-        className="text-4xl md:text-5xl font-bold text-center mb-12"
+        className="text-4xl text-gray-800 md:text-5xl font-bold text-center mb-12"
       >
         My Projects
       </motion.h1>
@@ -239,7 +239,7 @@ const Projects = () => {
               variants={cardVariants}
               initial="rest"
               whileHover="hover"
-              className="p-5"
+              className="p-5 bg-black border rounded-xl"
             >
               <div className="w-6 h-1 bg-red-500 my-2 justify-start"></div>
               <img
@@ -253,7 +253,7 @@ const Projects = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-red-500 hover:text-orange-400 text-sm font-medium"
+                className="text-red-500 hover:text-blue-400 text-sm font-medium"
               >
                 View Project →
               </a>
