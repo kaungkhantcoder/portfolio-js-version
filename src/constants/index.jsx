@@ -205,27 +205,13 @@ export const PROJECTS = [
   },
 ];
 
-export const projects = {
-  "AI & ML": [
-    { title: "AI Chatbot", description: "A conversational AI using NLP.", link: "#", image: projectImage2 },
-    { title: "AI Chatbot", description: "A conversational AI using NLP.", link: "#", image: projectImage2 },
-    { title: "AI Chatbot", description: "A conversational AI using NLP.", link: "#", image: projectImage2 },
-    { title: "Image Recognition", description: "Real-time object detection.", link: "#", image: projectImage3 },
-    { title: "Image Recognition", description: "Real-time object detection.", link: "#", image: projectImage3 },
-  ],
-  "Web": [
-    { title: "API Server", description: "RESTful API with Node.js.", link: "#", image: projectImage4 },
-    { title: "Database Optimization", description: "Scalable SQL solution.", link: "#", image: projectImage9 },
-  ],
-  "3D Design": [
-    { title: "3D Portfolio", description: "Interactive 3D web experience.", link: "#", image: projectImage6 },
-    { title: "Game Asset", description: "Low-poly 3D model for games.", link: "#", image: projectImage7 },
-  ],
-  "Circut": [
-    { title: "3D Portfolio", description: "Interactive 3D web experience.", link: "#", image: projectImage6 },
-    { title: "Game Asset", description: "Low-poly 3D model for games.", link: "#", image: projectImage7 },
-  ],
-};
+export const projects = [
+  { id: 1, name: "Project 1", image: "/src/assets/project2.jpeg", description: "This is my application", github: "https://github.com" },
+  { id: 2, name: "Project 2", image: "/src/assets/project3.jpeg", description: "This is my application", github: "https://github.com" },
+  { id: 3, name: "Project 3", image: "/src/assets/project9.webp", description: "This is my application", github: "https://github.com" },
+  { id: 4, name: "Project 4", image: "/src/assets/project5.jpeg", description: "This is my application", github: "https://github.com" },
+  { id: 5, name: "Project 4", image: "/src/assets/project6.jpeg", description: "This is my application", github: "https://github.com" },
+];
 
 
 export const BIO = {

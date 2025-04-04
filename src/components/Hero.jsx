@@ -445,7 +445,7 @@ useEffect(() => {
   return (
     <section
       id="hero"
-      className="relative flex w-screen items-center justify-center min-h-screen text-center rounded-3xl rounded-tr-[80px] rounded-tl-[80px] bg-gradient-to-tr from-gray-900 to-black/90  border border-white/20 py-2 mt-[30px] shadow-[0px_0px_50px_5px_rgba(48,25,52,0.5)] overflow-hidden bg-black/95 text-white"
+      className="relative flex w-full items-center justify-center min-h-screen text-center rounded-3xl bg-black  border border-white/20 py-2 mt-[30px] overflow-hidden bg-black/95 text-white"
     >
       <div className="flex flex-col w-full max-w-6xl mx-auto p-5 md:p-10 gap-6">
         {/* Top Section - Profile Info */}
@@ -474,7 +474,7 @@ useEffect(() => {
             <a
               href="/cv.pdf"
               download
-              className="flex items-center px-4 py-2 backdrop-blur-lg border border-gray-200 text-center rounded-lg hover:scale-105 transition font-medium bg-white text-black dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700"
+              className="flex items-center px-4 py-2 border border-gray-200 text-center rounded-lg hover:scale-105 transition font-medium bg-white text-black dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700"
             >
               Explore My CV <SiReaddotcv className="ml-2" />
             </a>
@@ -512,15 +512,15 @@ useEffect(() => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-4 md:p-6 rounded-xl bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 [clip-path:polygon(2rem_0,100%_0,100%_100%,0_100%,0_2rem)]"
+            className="relative p-4 md:p-6 rounded-xl bg-white border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
-              <h3 className="text-lg md:text-xl font-semibold text-white mb-2">
+              <h3 className="text-lg md:text-xl font-semibold text-black mb-2">
                 <span className="inline-block w-8 h-1 bg-green-400 mr-2"></span> About Me
               </h3>
-              <h3 className="text-md font-regular text-left mt-6 text-white">{BIO.main_text || "No main text available"}</h3>
-              <h1 className="text-[14px] md:text-[16px] font-regular text-left mt-6 text-white">{BIO.description || "No main text available"}</h1>
+              <h3 className="text-md font-regular text-left mt-6 text-black">{BIO.main_text || "No main text available"}</h3>
+              <h1 className="text-[14px] md:text-[16px] font-regular text-left mt-6 text-black">{BIO.description || "No main text available"}</h1>
             </div>
             <div className="absolute top-4 right-4 w-10 h-10 border-t-2 border-r-2 border-green-400/30 rounded-tr-xl"></div>
           </motion.div>
@@ -612,12 +612,12 @@ useEffect(() => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 [clip-path:polygon(0_0,calc(100%-3rem)_0,100%_3rem,100%_100%,0_100%)]"
+            className="relative p-6 md:p-8 rounded-xl bg-white border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-500/20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
-              <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
-                <span className="inline-block w-8 h-1 bg-orange-400 mr-2"></span> Tech Stack
+              <h3 className="text-xl md:text-2xl font-semibold text-black mb-6">
+                <span className="inline-block w-8 h-1 bg-black mr-2"></span> Tech Stack
               </h3>
               <div className="flex flex-wrap gap-4 md:gap-5">
                 {SKILLS.map((SKILLS, index) => {
@@ -626,16 +626,16 @@ useEffect(() => {
                     <motion.div
                       key={index}
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="flex items-center space-x-2 bg-black/50 p-3 rounded-lg border border-orange-500/20 hover:border-orange-500/50 transition-colors"
+                      className="flex items-center space-x-2 bg-black p-3 text-white rounded-lg border hover:border-black orange-500/50 hover:bg-white hover:text-black transition-colors"
                     >
-                      <Icon className="text-xl md:text-2xl text-gray-300 hover:text-orange-400" />
-                      <p className="text-xs md:text-sm text-gray-300 hover:text-white">{SKILLS.name}</p>
+                      <Icon className="text-xl md:text-2xl" />
+                      <p className="text-xs md:text-sm">{SKILLS.name}</p>
                     </motion.div>
                   );
                 })}
               </div>
             </div>
-            <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-orange-400/30 rounded-bl-xl"></div>
+            <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-black rounded-bl-xl"></div>
           </motion.div>
 
           <motion.div

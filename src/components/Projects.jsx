@@ -176,104 +176,156 @@
 
 // export default Hero;
 
+// import { useState } from "react";
+// import { motion } from "framer-motion";
+// import { projects } from "../constants"; // Ensure this points to index.jsx
+
+// const Projects = () => {
+//   const [activeTab, setActiveTab] = useState("AI & ML");
+//   const [showAll, setShowAll] = useState(false); // Track if all projects are shown
+
+//   const tabs = ["AI & ML", "Web", "3D Design", "Circut"];
+
+//   const cardVariants = {
+//     rest: { opacity: 0.8, scale: 1 },
+//     hover: { opacity: 1, scale: 1.03, transition: { duration: 0.3 } },
+//   };
+
+//   // Limit to 3 projects initially, or show all if showAll is true
+//   const displayedProjects = showAll
+//     ? projects[activeTab]
+//     : projects[activeTab].slice(0, 4);
+
+//   return (
+//     <section
+//       id="projects"
+//       className="relative w-screen py-16 text-white overflow-hidden"
+//     >
+//       {/* Header */}
+//       <motion.h1
+//         className="text-4xl text-gray-800 md:text-5xl font-bold text-center mb-12"
+//       >
+//         My Projects
+//       </motion.h1>
+
+//       {/* Tab Bar */}
+//       <div className="flex justify-center mb-10">
+//         <div className="inline-flex rounded-xl bg-black p-2 border border-gray-700/50">
+//           {tabs.map((tab) => (
+//             <button
+//               key={tab}
+//               onClick={() => {
+//                 setActiveTab(tab);
+//                 setShowAll(false); // Reset to 3 projects when switching tabs
+//               }}
+//               className={`px-3 md:px-6 py-2 rounded-xl text-[11px] md:text-sm font-medium transition-colors ${
+//                 activeTab === tab
+//                   ? "bg-white text-black"
+//                   : "text-gray-300 hover:text-white hover:bg-white/30"
+//               }`}
+//             >
+//               {tab}
+//             </button>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Projects Grid */}
+//       <div className="max-w-6xl mx-auto px-4">
+//         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+//           {displayedProjects.map((project, index) => (
+//             <motion.div
+//               key={`${activeTab}-${index}`} // Unique key per tab and index
+//               variants={cardVariants}
+//               initial="rest"
+//               whileHover="hover"
+//               className="p-5 bg-black border rounded-xl"
+//             >
+//               <div className="w-6 h-1 bg-red-500 my-2 justify-start"></div>
+//               <img
+//                 src={project.image}
+//                 alt={project.title}
+//                 className="w-full h-40 object-cover mb-4 rounded-md"
+//               />
+//               <h3 className="text-lg font-semibold text-white mb-1">{project.title}</h3>
+//               <p className="text-sm text-gray-400 mb-1">{project.description}</p>
+//               <a
+//                 href={project.link}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="text-red-500 hover:text-blue-400 text-sm font-medium"
+//               >
+//                 View Project →
+//               </a>
+//             </motion.div>
+//           ))}
+//         </motion.div>
+
+//         {/* See More / Show Less Button */}
+//         {projects[activeTab].length > 4 && (
+//           <div className="flex justify-center mt-8">
+//             <button
+//               onClick={() => setShowAll(!showAll)}
+//               className="px-6 py-2 rounded-xl bg-gray-800/50 text-white border border-gray-700/50 hover:bg-gray-700/70 transition-colors text-sm font-medium"
+//             >
+//               {showAll ? "Show Less" : "See More"}
+//             </button>
+//           </div>
+//         )}
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Projects;
+
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { projects } from "../constants"; // Ensure this points to index.jsx
+import { projects } from "../constants";
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("AI & ML");
-  const [showAll, setShowAll] = useState(false); // Track if all projects are shown
-
-  const tabs = ["AI & ML", "Web", "3D Design", "Circut"];
-
-  const cardVariants = {
-    rest: { opacity: 0.8, scale: 1 },
-    hover: { opacity: 1, scale: 1.03, transition: { duration: 0.3 } },
-  };
-
-  // Limit to 3 projects initially, or show all if showAll is true
-  const displayedProjects = showAll
-    ? projects[activeTab]
-    : projects[activeTab].slice(0, 4);
+  const [showAll, setShowAll] = useState(false); // State to toggle between 4 and all projects
+  const visibleProjects = showAll ? projects : projects.slice(0, 4); // Show 4 projects or all
 
   return (
-    <section
-      id="projects"
-      className="relative w-screen py-16 text-white overflow-hidden"
-    >
-      {/* Header */}
-      <motion.h1
-        className="text-4xl text-gray-800 md:text-5xl font-bold text-center mb-12"
-      >
-        My Projects
-      </motion.h1>
-
-      {/* Tab Bar */}
-      <div className="flex justify-center mb-10">
-        <div className="inline-flex rounded-xl bg-gray-800/50 p-2 border border-gray-700/50 backdrop-blur-sm">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => {
-                setActiveTab(tab);
-                setShowAll(false); // Reset to 3 projects when switching tabs
-              }}
-              className={`px-3 md:px-6 py-2 rounded-xl text-[11px] md:text-sm font-medium transition-colors ${
-                activeTab === tab
-                  ? "bg-white text-black"
-                  : "text-gray-300 hover:text-white hover:bg-gray-700/50"
-              }`}
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-6 p-4 max-w-4xl mx-auto" id="projects">
+      {visibleProjects.map((project) => (
+        <div
+          key={project.id}
+          className="relative overflow-hidden rounded-lg group"
+        >
+          <img
+            src={project.image}
+            alt={project.name}
+            className="w-full h-full object-cover transition duration-300 group-hover:blur-sm"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+            <h3 className="text-white text-lg font-bold">{project.name}</h3>
+            <p className="text-white text-md font-medium text-center pl-4 pr-4 p-2">
+              {project.description}
+            </p>
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 bg-white text-black px-4 py-2 rounded text-sm font-medium hover:bg-gray-200 transition duration-300"
             >
-              {tab}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Projects Grid */}
-      <div className="max-w-6xl mx-auto px-4">
-        <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayedProjects.map((project, index) => (
-            <motion.div
-              key={`${activeTab}-${index}`} // Unique key per tab and index
-              variants={cardVariants}
-              initial="rest"
-              whileHover="hover"
-              className="p-5 bg-black border rounded-xl"
-            >
-              <div className="w-6 h-1 bg-red-500 my-2 justify-start"></div>
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-40 object-cover mb-4 rounded-md"
-              />
-              <h3 className="text-lg font-semibold text-white mb-1">{project.title}</h3>
-              <p className="text-sm text-gray-400 mb-1">{project.description}</p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-red-500 hover:text-blue-400 text-sm font-medium"
-              >
-                View Project →
-              </a>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* See More / Show Less Button */}
-        {projects[activeTab].length > 4 && (
-          <div className="flex justify-center mt-8">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2 rounded-xl bg-gray-800/50 text-white border border-gray-700/50 hover:bg-gray-700/70 transition-colors text-sm font-medium"
-            >
-              {showAll ? "Show Less" : "See More"}
-            </button>
+              GitHub
+            </a>
           </div>
-        )}
-      </div>
-    </section>
+        </div>
+      ))}
+      {/* See More / Show Less Button */}
+      {projects.length > 4 && (
+        <div className="col-span-full flex justify-center mt-6">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-6 py-2 rounded-xl bg-black text-white border border-gray-700/50 hover:bg-white hover:text-black transition-colors text-sm font-medium"
+          >
+            {showAll ? "Show Less" : "See More"}
+          </button>
+        </div>
+      )}
+    </div>
   );
 };
 
