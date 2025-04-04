@@ -206,11 +206,11 @@ export const PROJECTS = [
 ];
 
 export const projects = [
-  { id: 1, name: "Project 1", image: "/src/assets/project2.jpeg", description: "This is my application", github: "https://github.com" },
-  { id: 2, name: "Project 2", image: "/src/assets/project3.jpeg", description: "This is my application", github: "https://github.com" },
-  { id: 3, name: "Project 3", image: "/src/assets/project9.webp", description: "This is my application", github: "https://github.com" },
-  { id: 4, name: "Project 4", image: "/src/assets/project5.jpeg", description: "This is my application", github: "https://github.com" },
-  { id: 5, name: "Project 4", image: "/src/assets/project6.jpeg", description: "This is my application", github: "https://github.com" },
+  { id: 1, name: "Project 1", image: projectImage4, description: "This is my application", github: "https://github.com" },
+  { id: 2, name: "Project 2", image: projectImage5, description: "This is my application", github: "https://github.com" },
+  { id: 3, name: "Project 3", image: projectImage4, description: "This is my application", github: "https://github.com" },
+  { id: 4, name: "Project 4", image: projectImage2, description: "This is my application", github: "https://github.com" },
+  { id: 5, name: "Project 4", image: projectImage6, description: "This is my application", github: "https://github.com" },
 ];
 
 
