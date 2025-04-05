@@ -288,7 +288,7 @@ const Projects = () => {
 
   return (
     <div className="">
-      <h1 className="text-bold text-left text-[40px] md:text-[70px] text-black p-4">My Projects <span className=""></span></h1>
+      <h1 className="text-bold text-left text-[40px] md:text-[70px] text-black p-4">My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span></h1>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-6 p-4 max-w-4xl mx-auto" id="projects">
         {visibleProjects.map((project) => (
           <div
