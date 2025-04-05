@@ -287,44 +287,47 @@ const Projects = () => {
   const visibleProjects = showAll ? projects : projects.slice(0, 4); // Show 4 projects or all
 
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-6 p-4 max-w-4xl mx-auto" id="projects">
-      {visibleProjects.map((project) => (
-        <div
-          key={project.id}
-          className="relative overflow-hidden rounded-lg group"
-        >
-          <img
-            src={project.image}
-            alt={project.name}
-            className="w-full h-full object-cover transition duration-300 group-hover:blur-sm"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-            <h3 className="text-white text-lg font-bold">{project.name}</h3>
-            <p className="text-white text-md font-medium text-center pl-4 pr-4 p-2">
-              {project.description}
-            </p>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 bg-white text-black px-4 py-2 rounded text-sm font-medium hover:bg-gray-200 transition duration-300"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      ))}
-      {/* See More / Show Less Button */}
-      {projects.length > 4 && (
-        <div className="col-span-full flex justify-center mt-6">
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 rounded-xl bg-black text-white border border-gray-700/50 hover:bg-white hover:text-black transition-colors text-sm font-medium"
+    <div className="">
+      <h1 className="text-bold text-left text-[40px] md:text-[70px] text-black p-4">My Projects <span className=""></span></h1>
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-6 p-4 max-w-4xl mx-auto" id="projects">
+        {visibleProjects.map((project) => (
+          <div
+            key={project.id}
+            className="relative overflow-hidden border p-3 border-black/50 rounded-lg group"
           >
-            {showAll ? "Show Less" : "See More"}
-          </button>
-        </div>
-      )}
+            <img
+              src={project.image}
+              alt={project.name}
+              className="w-full h-full object-cover transition rounded-lg border border-gray-200 duration-300 group-hover:blur-sm"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+              <h3 className="text-white text-lg font-bold">{project.name}</h3>
+              <p className="text-white text-md font-medium text-center pl-4 pr-4 p-2">
+                {project.description}
+              </p>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 bg-white text-black px-4 py-2 rounded text-sm font-medium hover:bg-gray-200 transition duration-300"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        ))}
+        {/* See More / Show Less Button */}
+        {projects.length > 4 && (
+          <div className="col-span-full flex justify-center mt-6">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-2 rounded-xl bg-black text-white border border-gray-700/50 hover:bg-white hover:text-black transition-colors text-sm font-medium"
+            >
+              {showAll ? "Show Less" : "See More"}
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

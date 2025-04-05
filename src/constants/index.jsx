@@ -57,6 +57,7 @@ export const EmailButton = () => {
 //   FaInstagram,
 // } from "react-icons/fa6";
 
+import projectImage1 from "../assets/Project1.png";
 import projectImage2 from "../assets/project2.jpeg";
 import projectImage3 from "../assets/project3.jpeg";
 import projectImage4 from "../assets/project4.jpeg";
@@ -206,11 +207,12 @@ export const PROJECTS = [
 ];
 
 export const projects = [
-  { id: 1, name: "Project 1", image: projectImage4, description: "This is my application", github: "https://github.com" },
-  { id: 2, name: "Project 2", image: projectImage5, description: "This is my application", github: "https://github.com" },
-  { id: 3, name: "Project 3", image: projectImage4, description: "This is my application", github: "https://github.com" },
-  { id: 4, name: "Project 4", image: projectImage2, description: "This is my application", github: "https://github.com" },
-  { id: 5, name: "Project 4", image: projectImage6, description: "This is my application", github: "https://github.com" },
+  { id: 1, name: "Project 1", image: projectImage1, description: "This is my application", github: "https://github.com" },
+  { id: 2, name: "Project 2", image: projectImage1, description: "This is my application", github: "https://github.com" },
+  { id: 3, name: "Project 3", image: projectImage1, description: "This is my application", github: "https://github.com" },
+  { id: 4, name: "Project 4", image: projectImage1, description: "This is my application", github: "https://github.com" },
+  { id: 5, name: "Project 4", image: projectImage1, description: "This is my application", github: "https://github.com" },
+  { id: 6, name: "Project 4", image: projectImage1, description: "This is my application", github: "https://github.com" },
 ];
 
 
