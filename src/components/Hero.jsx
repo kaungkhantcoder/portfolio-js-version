@@ -445,7 +445,7 @@ useEffect(() => {
   return (
     <section
       id="hero"
-      className="relative flex w-full items-center justify-center min-h-screen text-center rounded-3xl bg-black  border border-white/20 py-2 mt-[30px] overflow-hidden bg-black/95 text-white"
+      className="relative flex w-full items-center justify-center min-h-screen text-center rounded-3xl  border border-white/20 py-2 mt-[30px] overflow-hidden bg-black text-white"
     >
       <div className="flex flex-col w-full max-w-6xl mx-auto p-5 md:p-10 gap-6">
         {/* Top Section - Profile Info */}
@@ -456,7 +456,7 @@ useEffect(() => {
           <h1 className="text-2xl m-2 md:m-3 sm:text-5xl md:text-4xl lg:text-[5rem] font-bold">
               {HERO.name}
           </h1>
-          <div className="items-center mt-3 md:mt-7 backdrop-blur-lg border border-gray-200 text-center rounded-lg hover:scale-105 transition font-medium bg-white text-black dark:focus:ring-gray-600 dark:bg-black/20 dark:border-green-400 dark:text-white">
+          <div className="items-center mt-3 md:mt-7 backdrop-blur-lg border border-green-500 text-center rounded-lg hover:scale-105 transition font-medium text-white">
             <h1 className="p-3 md:p-4 text-2xl md:text-3xl lg:text-[3rem] font-bold">
               <span className="inline-block w-4 h-1 bg-green-400 mr-2"></span> {HERO.job}
             </h1>
@@ -474,7 +474,7 @@ useEffect(() => {
             <a
               href="/cv.pdf"
               download
-              className="flex items-center px-4 py-2 border border-gray-200 text-center rounded-lg hover:scale-105 transition font-medium bg-white text-black dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700"
+              className="flex items-center px-4 py-2 border border-white text-center rounded-lg hover:scale-105 transition font-medium text-white hover:bg-white hover:text-black"
             >
               Explore My CV <SiReaddotcv className="ml-2" />
             </a>

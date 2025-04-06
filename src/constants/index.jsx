@@ -26,7 +26,7 @@ export const EmailButton = () => {
       {/* Copy Email Button */}
       <a
         onClick={handleCopyEmail}
-        className="flex items-center px-4 py-2 backdrop-blur-lg border border-gray-200 text-center rounded-lg hover:scale-105 transition font-medium bg-white text-black dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 cursor-pointer"
+        className="flex items-center px-4 py-2 border border-white text-center rounded-lg hover:scale-105 transition font-medium bg-white text-black cursor-pointer"
       >
         <CgMail className="mr-2" /> COPY EMAIL
       </a>
@@ -57,6 +57,7 @@ export const EmailButton = () => {
 //   FaInstagram,
 // } from "react-icons/fa6";
 
+import profileImage from "../assets/Koderlogo.png"
 import projectImage1 from "../assets/Project1.png";
 import projectImage2 from "../assets/project2.jpeg";
 import projectImage3 from "../assets/project3.jpeg";
@@ -207,7 +208,7 @@ export const PROJECTS = [
 ];
 
 export const projects = [
-  { id: 1, name: "Project 1", image: projectImage1, description: "This is my application", github: "https://github.com" },
+  { id: 1, name: "Myanmar Healthcare chat bot", image: projectImage1, description: "This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine.", github: "https://github.com" },
   { id: 2, name: "Project 2", image: projectImage1, description: "This is my application", github: "https://github.com" },
   { id: 3, name: "Project 3", image: projectImage1, description: "This is my application", github: "https://github.com" },
   { id: 4, name: "Project 4", image: projectImage1, description: "This is my application", github: "https://github.com" },

@@ -279,6 +279,61 @@
 
 // export default Projects;
 
+// import { useState } from "react";
+// import { projects } from "../constants";
+
+// const Projects = () => {
+//   const [showAll, setShowAll] = useState(false); // State to toggle between 4 and all projects
+//   const visibleProjects = showAll ? projects : projects.slice(0, 4); // Show 4 projects or all
+
+//   return (
+//     <div className="">
+//       <h1 className="text-bold text-left text-[40px] md:text-[70px] text-black p-4">My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span></h1>
+//       <div className="grid md:grid-cols-2 grid-cols-1 gap-6 p-4 max-w-4xl mx-auto" id="projects">
+//         {visibleProjects.map((project) => (
+//           <div
+//             key={project.id}
+//             className="relative overflow-hidden border p-3 border-black/50 rounded-lg group"
+//           >
+//             <img
+//               src={project.image}
+//               alt={project.name}
+//               className="w-full h-full object-cover transition rounded-lg border border-gray-200 duration-300 group-hover:blur-sm"
+//             />
+//             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+//               <h3 className="text-white text-lg font-bold">{project.name}</h3>
+//               <p className="text-white text-md font-medium text-center pl-4 pr-4 p-2">
+//                 {project.description}
+//               </p>
+//               <a
+//                 href={project.github}
+//                 target="_blank"
+//                 rel="noopener noreferrer"
+//                 className="mt-2 bg-white text-black px-4 py-2 rounded text-sm font-medium hover:bg-gray-200 transition duration-300"
+//               >
+//                 GitHub
+//               </a>
+//             </div>
+//           </div>
+//         ))}
+//         {/* See More / Show Less Button */}
+//         {projects.length > 4 && (
+//           <div className="col-span-full flex justify-center mt-6">
+//             <button
+//               onClick={() => setShowAll(!showAll)}
+//               className="px-6 py-2 rounded-xl bg-black text-white border border-gray-700/50 hover:bg-white hover:text-black transition-colors text-sm font-medium"
+//             >
+//               {showAll ? "Show Less" : "See More"}
+//             </button>
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Projects;
+
 import { useState } from "react";
 import { projects } from "../constants";
 
@@ -287,47 +342,69 @@ const Projects = () => {
   const visibleProjects = showAll ? projects : projects.slice(0, 4); // Show 4 projects or all
 
   return (
-    <div className="">
-      <h1 className="text-bold text-left text-[40px] md:text-[70px] text-black p-4">My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span></h1>
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-6 p-4 max-w-4xl mx-auto" id="projects">
-        {visibleProjects.map((project) => (
-          <div
-            key={project.id}
-            className="relative overflow-hidden border p-3 border-black/50 rounded-lg group"
-          >
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-4 p-6 w-full mx-auto" id="projects">
+      {visibleProjects.map((project) => (
+        <div
+          key={project.id}
+          className="bg-white rounded-xl p-4 shadow-lg"
+        >
+          {/* Header (Avatar, Name, Date) */}
+          <div className="flex items-center mb-3">
+            <img
+              src={"/src/assets/Koderlogo.png"}
+              alt={project.name}
+              className="w-10 h-10 rounded-full flex-shrink-0 mr-3 flex items-center justify-center text-white font-bold text-sm"
+            />
+            <div className="flex-1">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-black font-semibold">{project.name}</h3>
+                  <span className="text-black/50 text-xs">
+                    {project.date || "April 2025"}
+                  </span>
+                </div>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden md:block bg-black/90 text-white px-4 py-1.5 rounded-md text-sm font-medium hover:scale-105 transition duration-200"
+                >
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+          {/* Content (Description + Tech Stack) */}
+          <p className="text-black/90 text-sm overflow-hidden mt-5 mb-3">{project.description}</p>
+          {/* Image */}
+          <div className="mb-4 w-full overflow-hidden rounded-lg">
             <img
               src={project.image}
               alt={project.name}
-              className="w-full h-full object-cover transition rounded-lg border border-gray-200 duration-300 group-hover:blur-sm"
+              className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-              <h3 className="text-white text-lg font-bold">{project.name}</h3>
-              <p className="text-white text-md font-medium text-center pl-4 pr-4 p-2">
-                {project.description}
-              </p>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 bg-white text-black px-4 py-2 rounded text-sm font-medium hover:bg-gray-200 transition duration-300"
-              >
-                GitHub
-              </a>
-            </div>
           </div>
-        ))}
-        {/* See More / Show Less Button */}
-        {projects.length > 4 && (
-          <div className="col-span-full flex justify-center mt-6">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2 rounded-xl bg-black text-white border border-gray-700/50 hover:bg-white hover:text-black transition-colors text-sm font-medium"
-            >
-              {showAll ? "Show Less" : "See More"}
-            </button>
-          </div>
-        )}
-      </div>
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="md:hidden bg-black/90 text-white hover:text-black hover:bg-black px-4 py-1.5 rounded-md md:text[16px] text-[12px] font-medium hover:scale-105 transition duration-200"
+          >
+            View on GitHub
+          </a>
+        </div>
+      ))}
+      {/* See More / Show Less Button */}
+      {projects.length > 4 && (
+        <div className="col-span-full flex justify-center mt-6">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-6 py-2 rounded-xl bg-black text-white border border-gray-700/50 hover:bg-white hover:text-black transition-colors text-sm font-medium"
+          >
+            {showAll ? "Show Less" : "See More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
