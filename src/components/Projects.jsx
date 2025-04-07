@@ -347,7 +347,7 @@ const Projects = () => {
       <h1 className="text-left p-6 text-[40px] md:text-[70px] text-black">
         My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span>
       </h1>
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-4 p-6 w-full mx-auto">
+      <div className="grid items-start md:grid-cols-2 grid-cols-1 gap-4 p-6 w-full mx-auto">
         {visibleProjects.map((project) => (
           <div
             key={project.id}

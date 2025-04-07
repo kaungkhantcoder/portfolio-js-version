@@ -392,7 +392,7 @@
 
 // export default Hero;
 
-import { HERO, SKILLS, INTEREST, otherskills, EmailButton } from "../constants";
+import { HERO, SKILLS, INTEREST, otherskills, EmailButton, EXPERIENCE, EDUCATION } from "../constants";
 import { FaReddit, FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { CgMail } from "react-icons/cg";
@@ -401,15 +401,7 @@ import { BIO } from "../constants";
 import lottie from "lottie-web";
 import { useEffect, useRef } from "react";
 
-// Sample data (replace with your actual data in constants or props)
-const EXPERIENCE = [
-  { role: "Software Developer", company: "Tech Corp", duration: "2022 - Present" },
-  { role: "Junior Developer", company: "Code Inc", duration: "2020 - 2022" },
-];
 
-const EDUCATION = [
-  { degree: "B.S. in Computer Science", institution: "Tech University", year: "2016 - 2020" },
-];
 
 const lottieUrl = "https://lottie.host/b35aeb62-f293-4a28-b4b8-2d21e9771d35/5WMyAHIh6u.json"
 

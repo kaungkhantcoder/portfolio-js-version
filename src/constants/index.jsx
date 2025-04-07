@@ -75,6 +75,16 @@ export const HERO = {
   ph_num: "+959976126328",
 };
 
+export const EXPERIENCE = [
+  { role: "Machine Learning Engineer", company: "Baymax 3.0", duration: "2025 - Present" },
+  { role: "Junior Backend Developer", company: "Code", duration: "2025 - Present" },
+  { role: "Volunteer Graphic Designer", company: "Code Mal", duration: "2024 - Present" },
+];
+
+export const EDUCATION = [
+  { degree: "No Degree", institution: "Online Grade-12 & GED student", year: "2025" },
+];
+
 export const SKILLS = [
   { name: "Python", icon: FaPython },
   { name: "Java", icon: FaJava },
