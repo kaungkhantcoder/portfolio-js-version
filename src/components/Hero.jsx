@@ -393,7 +393,7 @@
 // export default Hero;
 
 import { HERO, SKILLS, INTEREST, otherskills, EmailButton } from "../constants";
-import { FaReddit, FaFacebook, FaTwitter, FaLinkedin, FaGithub} from "react-icons/fa6";
+import { FaReddit, FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { CgMail } from "react-icons/cg";
 import { SiReaddotcv } from "react-icons/si";
@@ -425,22 +425,22 @@ const Hero = () => {
     }
   };
 
-// Ref for the Lottie container
-const lottieContainer = useRef(null);
+  // Ref for the Lottie container
+  const lottieContainer = useRef(null);
 
-// Load Lottie animation when component mounts
-useEffect(() => {
-  const anim = lottie.loadAnimation({
-    container: lottieContainer.current,
-    renderer: "svg", // Can also use "canvas" or "html"
-    loop: true,
-    autoplay: true,
-    path: lottieUrl, // URL to the Lottie JSON file
-  });
+  // Load Lottie animation when component mounts
+  useEffect(() => {
+    const anim = lottie.loadAnimation({
+      container: lottieContainer.current,
+      renderer: "svg", // Can also use "canvas" or "html"
+      loop: true,
+      autoplay: true,
+      path: lottieUrl, // URL to the Lottie JSON file
+    });
 
-  // Cleanup on unmount
-  return () => anim.destroy();
-}, []); // Empty dependency array means it runs once on mount
+    // Cleanup on unmount
+    return () => anim.destroy();
+  }, []); // Empty dependency array means it runs once on mount
 
   return (
     <section
@@ -454,7 +454,7 @@ useEffect(() => {
             {HERO.greet}
           </h1>
           <h1 className="text-2xl m-2 md:m-3 sm:text-5xl md:text-4xl lg:text-[5rem] font-bold">
-              {HERO.name}
+            {HERO.name}
           </h1>
           <div className="items-center mt-3 md:mt-7 backdrop-blur-lg border border-green-500 text-center rounded-lg hover:scale-105 transition font-medium text-white">
             <h1 className="p-3 md:p-4 text-2xl md:text-3xl lg:text-[3rem] font-bold">
@@ -470,36 +470,29 @@ useEffect(() => {
             className="w-full h-[200px] mt-4"
             style={{ position: "relative" }}
           ></div>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+          <div className="relative inline-block my-8">
+            {/* Ping Dot */}
+            <span className="absolute -top-1 -right-1 flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+
+            {/* Button */}
             <a
               href="/cv.pdf"
               download
-              className="flex items-center px-4 py-2 border border-white text-center rounded-lg hover:scale-105 transition font-medium text-white hover:bg-white hover:text-black"
+              className="inline-flex items-center px-5 py-2.5 border border-white rounded-lg bg-gray-900/80 text-white font-medium text-sm shadow-sm transition-all duration-300 hover:bg-white hover:text-black"
             >
-              Explore My CV <SiReaddotcv className="ml-2" />
+              Explore My CV
+              <SiReaddotcv className="ml-2 text-lg" />
             </a>
-            <EmailButton />
           </div>
-          <h1 className="mt-2 p-2 text-lg md:text-2xl lg:text-[17px] font-bold">
-            {HERO.ph_num}
-          </h1>
-          <div className="flex space-x-6 mt-2 justify-center">
-              <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-orange-500">
-                <FaReddit />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-600">
-                <FaFacebook />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-400">
-                <FaTwitter />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-blue-700">
-                <FaLinkedin />
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-gray-400">
-                <FaGithub />
-              </a>
-           </div>
+
+
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-[50px] h-[50px] p-3 mt-6 animate-bounce border border-white rounded-full">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+          </svg>
+
         </div>
 
 
@@ -639,33 +632,33 @@ useEffect(() => {
           </motion.div>
 
           <motion.div
-              variants={boxVariants}
-              whileHover="hover"
-              initial="rest"
-              className="relative p-6 rounded-xl md:p-8 bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 [clip-path:polygon(0_0,calc(100%-2rem)_0,100%_2rem,100%_100%,0_100%)]"
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-blue-300/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative z-10">
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
-                  <span className="inline-block w-8 h-1 bg-blue-400 mr-2"></span> Other Skills
-                </h3>
-                <div className="flex flex-wrap gap-2 md:gap-3">
-                  {otherskills.map((otherskills, index) => {
-                    const Icon = otherskills.icon;
-                    return (
-                      <motion.div
-                        key={index}
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        className="flex items-center space-x-2 bg-black/50 p-3 rounded-lg border border-blue-500/20 hover:border-blue-500/50 transition-colors"
-                      >
-                        <Icon className="text-xl md:text-2xl text-gray-300 hover:text-blue-400" />
-                        <p className="text-xs md:text-sm text-gray-300 hover:text-white">{otherskills.name}</p>
-                      </motion.div>
-                    );
-                  })}
-                </div>
+            variants={boxVariants}
+            whileHover="hover"
+            initial="rest"
+            className="relative p-6 rounded-xl md:p-8 bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 [clip-path:polygon(0_0,calc(100%-2rem)_0,100%_2rem,100%_100%,0_100%)]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-blue-300/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative z-10">
+              <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
+                <span className="inline-block w-8 h-1 bg-blue-400 mr-2"></span> Other Skills
+              </h3>
+              <div className="flex flex-wrap gap-2 md:gap-3">
+                {otherskills.map((otherskills, index) => {
+                  const Icon = otherskills.icon;
+                  return (
+                    <motion.div
+                      key={index}
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="flex items-center space-x-2 bg-black/50 p-3 rounded-lg border border-blue-500/20 hover:border-blue-500/50 transition-colors"
+                    >
+                      <Icon className="text-xl md:text-2xl text-gray-300 hover:text-blue-400" />
+                      <p className="text-xs md:text-sm text-gray-300 hover:text-white">{otherskills.name}</p>
+                    </motion.div>
+                  );
+                })}
               </div>
-              <div className="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-blue-400/30 rounded-br-xl"></div>
+            </div>
+            <div className="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-blue-400/30 rounded-br-xl"></div>
           </motion.div>
         </div>
       </div>

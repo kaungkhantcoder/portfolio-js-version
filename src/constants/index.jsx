@@ -9,7 +9,6 @@ import { IoTabletPortrait } from "react-icons/io5";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { CgMail } from "react-icons/cg";
 import { MdBusiness } from "react-icons/md";
 
 export const EmailButton = () => {
@@ -26,9 +25,9 @@ export const EmailButton = () => {
       {/* Copy Email Button */}
       <a
         onClick={handleCopyEmail}
-        className="flex items-center px-4 py-2 border border-white text-center rounded-lg hover:scale-105 transition font-medium bg-white text-black cursor-pointer"
-      >
-        <CgMail className="mr-2" /> COPY EMAIL
+        class="relative inline-flex items-center border-[2px] border-white/50 justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group">
+        <span class="w-[310px] h-[350px] rounded rotate-[-40deg] bg-gradient-to-br from-purple-900 via-purple-700 to-blue-600 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+        <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">kaungkhantcoder@gmail.com ↗</span>
       </a>
 
       {/* Custom Notification */}
@@ -38,7 +37,7 @@ export const EmailButton = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-[-3rem] left-1/2 transform -translate-x-1/2 px-4 py-2 bg-gray-900/90 text-white text-sm rounded-lg shadow-lg border border-gray-700/50 flex items-center"
+          className="absolute top-[-1rem] left-1/4 transform -translate-x-1/2 px-4 py-2 bg-gray-900/90 text-white text-sm rounded-lg shadow-lg border border-gray-700/50 flex items-center"
         >
           <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
           Email copied!
@@ -47,6 +46,8 @@ export const EmailButton = () => {
     </div>
   );
 };
+
+
 
 // import {
 //   FaXTwitter,
@@ -81,12 +82,13 @@ import { FaNodeJs } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAddressCard } from "react-icons/fa";
 
+export const profile = { image: profileImage }
 
 export const NAVIGATION_LINKS = [
-  { label: "Main", href: "#hero" , icon: FaAddressCard },
+  { label: "Main", href: "#hero", icon: FaAddressCard },
   { label: "About Me", href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Achievements", href: "#achievements" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export const achievements = [
@@ -105,22 +107,22 @@ export const HERO = {
 };
 
 export const SKILLS = [
-    { name: "Python", icon: FaPython },
-    { name: "Java", icon: FaJava },
-    { name: "JavaScript", icon: RiJavascriptFill },
-    { name: "C++", icon: SiCplusplus },
-    { name: "TensorFlow", icon: SiTensorflow },
-    { name: "NumPy", icon: SiNumpy },
-    { name: "OpenCV", icon: SiOpencv },
-    { name: "Pandas", icon: SiPandas },
-    { name: "Django", icon: SiDjango },
-    { name: "Flask", icon: SiFlask },
-    { name: "MySQL", icon: SiMysql },
-    { name: "Docker", icon: FaDocker },
-    { name: "Postgresql", icon: BiLogoPostgresql },
-    { name: "React", icon: FaReact },
-    { name: "Streamlit", icon: SiStreamlit },
-    { name: "Git", icon: FaGitAlt },
+  { name: "Python", icon: FaPython },
+  { name: "Java", icon: FaJava },
+  { name: "JavaScript", icon: RiJavascriptFill },
+  { name: "C++", icon: SiCplusplus },
+  { name: "TensorFlow", icon: SiTensorflow },
+  { name: "NumPy", icon: SiNumpy },
+  { name: "OpenCV", icon: SiOpencv },
+  { name: "Pandas", icon: SiPandas },
+  { name: "Django", icon: SiDjango },
+  { name: "Flask", icon: SiFlask },
+  { name: "MySQL", icon: SiMysql },
+  { name: "Docker", icon: FaDocker },
+  { name: "Postgresql", icon: BiLogoPostgresql },
+  { name: "React", icon: FaReact },
+  { name: "Streamlit", icon: SiStreamlit },
+  { name: "Git", icon: FaGitAlt },
 ];
 
 import { BsCpuFill, BsRobot } from "react-icons/bs";
@@ -133,7 +135,7 @@ import { LuBrainCircuit } from "react-icons/lu";
 export const INTEREST = [
   { name: "Entrepreneurship", icon: MdBusiness },
   { name: "Computer Vision", icon: SiInternetcomputer },
-  { name: "Programming", icon: FaLaptopCode},
+  { name: "Programming", icon: FaLaptopCode },
   { name: "AI", icon: LuBrainCircuit },
   { name: "Mathematics", icon: TbMathSymbols },
   { name: "Physics", icon: GiMaterialsScience },
@@ -144,149 +146,41 @@ export const INTEREST = [
   { name: "Chess", icon: FaChess },
   { name: "Rubik's Cube", icon: PiCubeFill },
   { name: "Robotics", icon: BsRobot },
-  { name: "3D Design", icon: FaPython},
+  { name: "3D Design", icon: FaPython },
 ];
 export const otherskills = [
   { name: "Communication", icon: FaPython },
-  { name: "Teamwork", icon: FaPython},
-  { name: "Problem Solving", icon: FaPython},
-  { name: "Active Listening", icon: FaPython},
-  { name: "Critical Thinking", icon: FaPython},
-  { name: "English C2", icon: FaPython},
-  { name: "German B2", icon: FaPython},
-  { name: "Time Management", icon: FaPython},
+  { name: "Teamwork", icon: FaPython },
+  { name: "Problem Solving", icon: FaPython },
+  { name: "Active Listening", icon: FaPython },
+  { name: "Critical Thinking", icon: FaPython },
+  { name: "English C2", icon: FaPython },
+  { name: "German B2", icon: FaPython },
+  { name: "Time Management", icon: FaPython },
 ];
 
-export const PROJECTS = [
+const Description = [
   {
-    id: 1,
-    name: "BayMax 3.0",
-    description: "Health Care Machine Learning Project.",
-    techStack: ["Python", "TensorFlow", "CNN", "OpenCV", "Streamlit"],
-    githubLink: "https://github.com/kaungkhantcoder/Baymax3.0"
+    description1:
+      "This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine."
   },
   {
-    id: 2,
-    name: "AI Chatbot",
-    image: projectImage2,
-    description: "A chatbot powered by OpenAI's GPT API.",
-    techStack: ["Python", "Flask", "OpenAI API"],
-    githubLink: "https://github.com/yourgithub/aichatbot"
+    description2:
+      "You can chat with our bot, that's excaetly, working on you machine."
   },
-  {
-    id: 3,
-    name: "AI Chatbot",
-    image: projectImage3,
-    description: "A chatbot powered by OpenAI's GPT API.",
-    techStack: ["Python", "Flask", "OpenAI API"],
-    githubLink: "https://github.com/yourgithub/aichatbot"
-  },
-  {
-    id: 4,
-    name: "AI Chatbot",
-    image: projectImage3,
-    description: "A chatbot powered by OpenAI's GPT API.",
-    techStack: ["Python", "Flask", "OpenAI API"],
-    githubLink: "https://github.com/yourgithub/aichatbot"
-  },
-  {
-    id: 5,
-    name: "AI Chatbot",
-    image: projectImage3,
-    description: "A chatbot powered by OpenAI's GPT API.",
-    techStack: ["Python", "Flask", "OpenAI API"],
-    githubLink: "https://github.com/yourgithub/aichatbot"
-  },
-  {
-    id: 6,
-    name: "AI Chatbot",
-    image: projectImage3,
-    description: "A chatbot powered by OpenAI's GPT API.",
-    techStack: ["Python", "Flask", "OpenAI API"],
-    githubLink: "https://github.com/yourgithub/aichatbot"
-  },
-];
+]
 
 export const projects = [
-  { id: 1, name: "Myanmar Healthcare chat bot", image: projectImage1, description: "This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine.", github: "https://github.com" },
-  { id: 2, name: "Project 2", image: projectImage1, description: "This is my application", github: "https://github.com" },
-  { id: 3, name: "Project 3", image: projectImage1, description: "This is my application", github: "https://github.com" },
-  { id: 4, name: "Project 4", image: projectImage1, description: "This is my application", github: "https://github.com" },
-  { id: 5, name: "Project 4", image: projectImage1, description: "This is my application", github: "https://github.com" },
-  { id: 6, name: "Project 4", image: projectImage1, description: "This is my application", github: "https://github.com" },
+  { id: 1, name: "My Portfolio", image: projectImage1, date: "April 2, 2025", description: Description[0].description1, github: "https://github.com" },
+  { id: 2, name: "Project 2", image: projectImage1, date: "April 2, 2025", description: Description[1].description2, github: "https://github.com" },
+  { id: 3, name: "Project 3", image: projectImage1, date: "April 2, 2025", description: "This is my application", github: "https://github.com" },
+  { id: 4, name: "Project 4", image: projectImage1, date: "April 2, 2025", description: "This is my application", github: "https://github.com" },
+  { id: 5, name: "Project 4", image: projectImage1, date: "April 2, 2025", description: "This is my application", github: "https://github.com" },
+  { id: 6, name: "Project 4", image: projectImage1, date: "April 2, 2025", description: "This is my application", github: "https://github.com" },
 ];
-
 
 export const BIO = {
   main_text: "Hi! This is Kaung Khant, and also know as Koder Grit.",
   description: "I am a passionate creating software and hardware with AI, ML, and CV. I would like to create computer vision app with IOT devieces. Currently, I am going to create Rubik's cube detection and solving CV + ML application. And If you have any idea of project, you can reach me out freely. I'm ready to contribute you.",
 
 };
-
-export const EXPERIENCES = [
-  {
-    title: "Lead Frontend Developer",
-    company: "Innovative Tech Solutions",
-    duration: "July 2020 - Present",
-    description:
-      "As the Lead Frontend Developer, I spearheaded the development of advanced web applications using cutting-edge technologies like React, Redux, and TypeScript. I worked closely with cross-functional teams, including designers, product managers, and backend developers, to deliver seamless and high-performance user experiences.",
-  },
-  {
-    title: "Frontend Engineer",
-    company: "Digital Creations",
-    duration: "February 2016 - June 2020",
-    description:
-      "At Digital Creations, I focused on building highly interactive and responsive web interfaces using HTML, CSS, JavaScript, and modern libraries like React. I collaborated closely with UX/UI designers to implement design changes that enhanced user engagement and satisfaction. My role involved optimizing website performance, ensuring cross-browser compatibility, and implementing SEO best practices. ",
-  },
-  {
-    title: "Junior Web Developer",
-    company: "Bright Future Technologies",
-    duration: "August 2014 - January 2016",
-    description:
-      "In my role as a Junior Web Developer, I assisted in the development and maintenance of various web applications. I gained hands-on experience in utilizing HTML, CSS, and JavaScript to create user-friendly interfaces. I actively participated in team meetings, contributed to project planning, and collaborated with senior developers to implement new features.",
-  },
-];
-
-export const EDUCATION = [
-  {
-    degree: "Master of Science in Computer Science",
-    institution: "Stanford University",
-    duration: "September 2012 - June 2014",
-    description:
-      "Specialized in Human-Computer Interaction and Software Engineering. Completed a thesis on enhancing user experience in web applications through advanced interactive techniques. Participated in various projects involving frontend development, algorithms, and data structures. Graduated with honors.",
-  },
-  {
-    degree: "Bachelor of Science in Information Technology",
-    institution: "University of California, Berkeley",
-    duration: "September 2008 - June 2012",
-    description:
-      "Focused on web development, programming languages, and database management. Actively involved in coding clubs and hackathons, where I developed several web applications using HTML, CSS, JavaScript, and PHP. Completed a senior project on developing an e-commerce platform. Graduated with a high GPA.",
-  },
-];
-
-// export const SOCIAL_MEDIA_LINKS = [
-//   {
-//     href: "https://x.com/",
-//     icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://x.com/",
-//     icon: <FaDiscord fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://x.com/",
-//     icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://x.com/",
-//     icon: <FaXTwitter fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://github.com/",
-//     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://www.linkedin.com/",
-//     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
-//   },
-// ];
