@@ -1,4 +1,4 @@
-import { FaReddit, FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaPython, FaJava, FaReact } from "react-icons/fa6";
+import { FaPython, FaJava, FaReact } from "react-icons/fa6";
 import { SiJupyter, SiTensorflow, SiOpencv, SiNumpy, SiPandas } from "react-icons/si";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaGitAlt, FaDocker } from "react-icons/fa";
@@ -47,35 +47,11 @@ export const EmailButton = () => {
   );
 };
 
-
-
-// import {
-//   FaXTwitter,
-//   FaGithub,
-//   FaLinkedin,
-//   FaFacebook,
-//   FaDiscord,
-//   FaInstagram,
-// } from "react-icons/fa6";
-
 import profileImage from "../assets/Koderlogo.png"
 import projectImage1 from "../assets/Project1.png";
-import projectImage2 from "../assets/project2.jpeg";
-import projectImage3 from "../assets/project3.jpeg";
-import projectImage4 from "../assets/project4.jpeg";
-import projectImage5 from "../assets/project5.jpeg";
-import projectImage6 from "../assets/project6.jpeg";
-import projectImage7 from "../assets/project7.webp";
-import projectImage8 from "../assets/project8.webp";
-import projectImage9 from "../assets/project9.webp";
+import projectImage2 from "../assets/Project_Leaf_It.png";
 
-import cert1 from "/src/assets/project2.jpeg"; // Example certificate
-import cert2 from "/src/assets/project3.jpeg"; // Example certificate
-import hackathon1 from "/src/assets/project3.jpeg"; // Example hackathon win
-import cert3 from "/src/assets/image.webp"; // Example hackathon win
 
-import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandNextjs } from "react-icons/tb";
 import { SiMongodb, SiDjango, SiMysql, SiFlask } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
@@ -89,13 +65,6 @@ export const NAVIGATION_LINKS = [
   { label: "About Me", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
-];
-
-export const achievements = [
-  { image: cert1, title: "React Developer Certificate" },
-  { image: hackathon1, title: "AI Hackathon 2023 - 1st Place" },
-  { image: cert2, title: "Backend Development Course" },
-  { image: cert3, title: "AI Agents Course" },
 ];
 
 export const HERO = {
@@ -166,21 +135,82 @@ const Description = [
   },
   {
     description2:
-      "You can chat with our bot, that's excaetly, working on you machine."
+      "This is a project for the subject of (Introduction to Artificial Intelligence) at Simbolo. The project is created by: Simbolo's Farmers."
   },
 ]
 
-export const projects = [
-  { id: 1, name: "My Portfolio", image: projectImage1, date: "April 2, 2025", description: Description[0].description1, github: "https://github.com" },
-  { id: 2, name: "Project 2", image: projectImage1, date: "April 2, 2025", description: Description[1].description2, github: "https://github.com" },
-  { id: 3, name: "Project 3", image: projectImage1, date: "April 2, 2025", description: "This is my application", github: "https://github.com" },
-  { id: 4, name: "Project 4", image: projectImage1, date: "April 2, 2025", description: "This is my application", github: "https://github.com" },
-  { id: 5, name: "Project 4", image: projectImage1, date: "April 2, 2025", description: "This is my application", github: "https://github.com" },
-  { id: 6, name: "Project 4", image: projectImage1, date: "April 2, 2025", description: "This is my application", github: "https://github.com" },
-];
 
 export const BIO = {
   main_text: "Hi! This is Kaung Khant, and also know as Koder Grit.",
   description: "I am a passionate creating software and hardware with AI, ML, and CV. I would like to create computer vision app with IOT devieces. Currently, I am going to create Rubik's cube detection and solving CV + ML application. And If you have any idea of project, you can reach me out freely. I'm ready to contribute you.",
 
 };
+
+export const projects = [
+  {
+    id: 1,
+    name: "My Portfolio",
+    image: projectImage1,
+    date: "April 2, 2025",
+    description: Description[0].description1,
+    github: "https://github.com",
+    contributors: [], // No contributors
+  },
+  {
+    id: 2,
+    name: "Leaf-It",
+    image: projectImage2,
+    date: "December 15, 2024",
+    description: Description[1].description2,
+    github: "https://github.com/kaungkhantcoder/Simbolo-leaf-it",
+    contributors: [
+      { name: "David Mg Mg", url: "https://github.com/DepressoLofi" },
+      { name: "Thant Htut Aung", url: "https://github.com/ThantHTUT" },
+      { name: "Thet Hmue Khin", url: "https://github.com/AThet01" },
+    ],
+  },
+  {
+    id: 3,
+    name: "Project 3",
+    image: projectImage1,
+    date: "April 2, 2025",
+    description: "This is my application",
+    github: "https://github.com",
+    contributors: [
+      { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+    ],
+  },
+  {
+    id: 4,
+    name: "Project 4",
+    image: projectImage1,
+    date: "April 2, 2025",
+    description: "This is my application",
+    github: "https://github.com",
+    contributors: [
+      { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+    ],
+  },
+  {
+    id: 5,
+    name: "Project 5",
+    image: projectImage1,
+    date: "April 2, 2025",
+    description: "This is my application",
+    github: "https://github.com",
+    contributors: [
+      { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+    ],
+  },
+  {
+    id: 6,
+    name: "Project 6",
+    image: projectImage1,
+    date: "April 2, 2025",
+    description: "This is my application",
+    github: "https://github.com",
+    contributors: [
+      { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+    ],
+  },
+];

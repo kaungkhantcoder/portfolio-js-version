@@ -336,6 +336,7 @@
 
 import { useState } from "react";
 import { projects, profile } from "../constants";
+import { FaGithub } from "react-icons/fa6";
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false); // State to toggle between 4 and all projects
@@ -343,7 +344,7 @@ const Projects = () => {
 
   return (
     <div id='projects'>
-      <h1 className="text-left py-3 text-[40px] md:text-[70px] text-black">
+      <h1 className="text-left p-6 text-[40px] md:text-[70px] text-black">
         My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span>
       </h1>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-4 p-6 w-full mx-auto">
@@ -388,6 +389,24 @@ const Projects = () => {
                 className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
               />
             </div>
+            {project.contributors && project.contributors.length > 0 && (
+              <div className="mt-2">
+                <h2 className="font-bold text-lg text-black">Contributors</h2>
+                {project.contributors.map((contributor, index) => (
+                  <a
+                    key={index}
+                    href={contributor.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center mb-2 md:my-2 px-2 py-2 border border-white rounded-lg bg-gray-900/70 text-white font-thin text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
+                  >
+                    <FaGithub className="mr-2 text-lg" />
+                    {contributor.name}
+                  </a>
+                ))}
+              </div>
+            )}
+
             <a
               href={project.github}
               target="_blank"
