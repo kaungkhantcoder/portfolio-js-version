@@ -55,11 +55,13 @@ const Navbar = () => {
           <span className="inline-block w-[3rem] h-1 bg-gray-800 ml-1.5 my-3"></span>
           <ul className="grid grid-cols-2 gap-4">
             {NAVIGATION_LINKS.map((item, index) => (
-              <li key={index}>
+              <li key={index}
+              className={`${index === NAVIGATION_LINKS.length - 1 ? "col-span-2" : ""}`}
+              >
                 <a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
-                  className="rounded relative block group items-center text-center px-2 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-gray-600 active:shadow-none shadow-lg bg-gradient-to-tr from-gray-600 to-gray-900 border-gray-700 hover:font-bold text-white"
+                  className="rounded relative block items-center text-center px-2 py-2 cursor-pointer border-b-4 border-l-2 active:border-gray-600 active:shadow-none shadow-lg bg-gradient-to-tr from-gray-600 to-gray-900 border-gray-700 hover:font-bold text-white"
                 >
                   <span class="relative">{item.label}</span>
                 </a>

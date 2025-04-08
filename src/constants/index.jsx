@@ -63,6 +63,7 @@ export const profile = { image: profileImage }
 export const NAVIGATION_LINKS = [
   { label: "MAIN", href: "#hero" },
   { label: "ABOUT", href: "#about" },
+  { label: "SKILLS", href: "#skills" },
   { label: "PROJECTS", href: "#projects" },
   { label: "CONTACT", href: "#contact" },
 ];
