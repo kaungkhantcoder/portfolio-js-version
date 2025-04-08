@@ -1,8 +1,8 @@
-import { FaPython, FaJava, FaReact } from "react-icons/fa6";
-import { SiJupyter, SiTensorflow, SiOpencv, SiNumpy, SiPandas } from "react-icons/si";
+import { FaPython, FaJava, FaReact, FaGolang, FaFigma, FaPeopleGroup, FaLightbulb } from "react-icons/fa6";
+import { SiJupyter, SiTensorflow, SiOpencv, SiNumpy, SiPandas, SiFastapi } from "react-icons/si";
 import { RiJavascriptFill } from "react-icons/ri";
 import { FaGitAlt, FaDocker } from "react-icons/fa";
-import { SiCplusplus, SiStreamlit, SiInternetcomputer } from "react-icons/si";
+import { SiCplusplus, SiStreamlit, SiInternetcomputer, SiTypescript } from "react-icons/si";
 import { TbMathSymbols } from "react-icons/tb";
 import { GiMaterialsScience } from "react-icons/gi";
 import { IoTabletPortrait } from "react-icons/io5";
@@ -54,17 +54,17 @@ import projectImage2 from "../assets/Project_Leaf_It.png";
 
 import { SiMongodb, SiDjango, SiMysql, SiFlask } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
+import { FaNodeJs, FaAssistiveListeningSystems, FaBrain, FaFlagUsa, FaUserClock } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAddressCard } from "react-icons/fa";
 
 export const profile = { image: profileImage }
 
 export const NAVIGATION_LINKS = [
-  { label: "Main", href: "#hero", icon: FaAddressCard },
-  { label: "About Me", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "MAIN", href: "#hero" },
+  { label: "ABOUT", href: "#about" },
+  { label: "PROJECTS", href: "#projects" },
+  { label: "CONTACT", href: "#contact" },
 ];
 
 export const HERO = {
@@ -87,25 +87,28 @@ export const EDUCATION = [
 
 export const SKILLS = [
   { name: "Python", icon: FaPython },
-  { name: "Java", icon: FaJava },
-  { name: "JavaScript", icon: RiJavascriptFill },
   { name: "C++", icon: SiCplusplus },
+  { name: "Golang", icon: FaGolang },
+  { name: "JavaScript", icon: RiJavascriptFill },
+  { name: "Typescript", icon: SiTypescript },
   { name: "TensorFlow", icon: SiTensorflow },
   { name: "NumPy", icon: SiNumpy },
   { name: "OpenCV", icon: SiOpencv },
   { name: "Pandas", icon: SiPandas },
   { name: "Django", icon: SiDjango },
   { name: "Flask", icon: SiFlask },
+  { name: "FastAPI", icon: SiFastapi },
   { name: "MySQL", icon: SiMysql },
   { name: "Docker", icon: FaDocker },
   { name: "Postgresql", icon: BiLogoPostgresql },
   { name: "React", icon: FaReact },
   { name: "Streamlit", icon: SiStreamlit },
   { name: "Git", icon: FaGitAlt },
+  { name: "Figma", icon: FaFigma },
 ];
 
 import { BsCpuFill, BsRobot } from "react-icons/bs";
-import { MdVolunteerActivism } from "react-icons/md";
+import { MdVolunteerActivism, MdPublic } from "react-icons/md";
 import { GoLaw } from "react-icons/go";
 import { FaChess, FaLaptopCode } from "react-icons/fa";
 import { PiCubeFill } from "react-icons/pi";
@@ -128,14 +131,13 @@ export const INTEREST = [
   { name: "3D Design", icon: FaPython },
 ];
 export const otherskills = [
-  { name: "Communication", icon: FaPython },
-  { name: "Teamwork", icon: FaPython },
-  { name: "Problem Solving", icon: FaPython },
-  { name: "Active Listening", icon: FaPython },
-  { name: "Critical Thinking", icon: FaPython },
-  { name: "English C2", icon: FaPython },
-  { name: "German B2", icon: FaPython },
-  { name: "Time Management", icon: FaPython },
+  { name: "Communication", icon: MdPublic },
+  { name: "Teamwork", icon: FaPeopleGroup },
+  { name: "Problem Solving", icon: FaLightbulb },
+  { name: "Active Listening", icon: FaAssistiveListeningSystems },
+  { name: "Critical Thinking", icon: FaBrain },
+  { name: "English C2", icon: FaFlagUsa },
+  { name: "Time Management", icon: FaUserClock },
 ];
 
 const Description = [

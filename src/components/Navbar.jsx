@@ -38,7 +38,7 @@ const Navbar = () => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="p-3 rounded-lg bg-gray-900/80 border border-gray-500 text-white hover:bg-gray-800/90 transition-colors focus:outline-none"
+        className="p-3 rounded-lg border-b-4 border-l-2 active:border-gray-900 active:shadow-none shadow-lg bg-gradient-to-tr from-gray-600 to-gray-900 border-gray-700 transition-colors focus:outline-none"
       >
         {isMenuOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
       </button>
@@ -50,18 +50,18 @@ const Navbar = () => {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="fixed top-16 right-4 w-64 my-2 bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-xl shadow-lg p-4"
+          className="fixed top-16 w-[17rem] right-6 my-2 hover:text-white bg-white drop-shadow-lg rounded-xl shadow-lg p-4"
         >
-          <ul className="flex flex-col gap-4">
-          <span className="inline-block w-8 h-1 bg-white mr-2"></span>
+          <span className="inline-block w-[3rem] h-1 bg-gray-800 ml-1.5 my-3"></span>
+          <ul className="grid grid-cols-2 gap-4">
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
                 <a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
-                  className="block text-white/90 text-lg font-medium p-1 rounded-sm hover:text-black hover:bg-white transition-colors"
+                  className="rounded relative block group items-center text-center px-2 py-2 m-1 cursor-pointer border-b-4 border-l-2 active:border-gray-600 active:shadow-none shadow-lg bg-gradient-to-tr from-gray-600 to-gray-900 border-gray-700 hover:font-bold text-white"
                 >
-                  {item.label}
+                  <span class="relative">{item.label}</span>
                 </a>
               </li>
             ))}

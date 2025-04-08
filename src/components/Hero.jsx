@@ -632,7 +632,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-blue-300/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
-                <span className="inline-block w-8 h-1 bg-blue-400 mr-2"></span> Other Skills
+                <span className="inline-block w-8 h-1 bg-blue-400 mr-2"></span> Extra Capabilities
               </h3>
               <div className="flex flex-wrap gap-2 md:gap-3">
                 {otherskills.map((otherskills, index) => {
