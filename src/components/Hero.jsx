@@ -597,12 +597,12 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-white border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
+            className="relative p-6 md:p-8 rounded-xl border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/30 via-transparent to-blue-500/20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/20 via-blue-500/10 to-blue-500/20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
-              <h3 className="text-xl md:text-2xl font-semibold text-black mb-6">
-                <span className="inline-block w-8 h-1 bg-black mr-2"></span> Tech Stack
+              <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
+                <span className="inline-block w-8 h-1 bg-white mr-2"></span> Tech Stack
               </h3>
               <div className="flex flex-wrap gap-4 md:gap-5">
                 {SKILLS.map((SKILLS, index) => {
@@ -611,16 +611,17 @@ const Hero = () => {
                     <motion.div
                       key={index}
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="flex items-center space-x-2 bg-black p-3 text-white rounded-lg border hover:border-black orange-500/50 hover:bg-white hover:text-black transition-colors"
+                      className="flex cursor-pointer items-center transition-all bg-gradient-to-tl from-[#141e30] to-[#243b55] text-white px-6 py-2 rounded-lg border-[#0f173d] border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+                                  active:border-b-[2px] active:brightness-90 active:translate-y-[2px]"
                     >
-                      <Icon className="text-xl md:text-2xl" />
+                      <Icon className="text-xl md:text-2xl mr-2" />
                       <p className="text-xs md:text-sm">{SKILLS.name}</p>
                     </motion.div>
                   );
                 })}
               </div>
             </div>
-            <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-black rounded-bl-xl"></div>
+            <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-gray-800 rounded-bl-xl"></div>
           </motion.div>
 
           <motion.div
