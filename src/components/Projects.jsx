@@ -347,7 +347,7 @@ const Projects = () => {
       <h1 className="text-left p-6 text-[40px] md:text-[70px] text-black">
         My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span>
       </h1>
-      <div className="grid items-start md:grid-cols-2 grid-cols-1 gap-4 p-6 w-full mx-auto">
+      <div className="grid items-start grid-cols-1 gap-4 p-6 w-full mx-auto">
         {visibleProjects.map((project) => (
           <div
             key={project.id}
@@ -363,7 +363,7 @@ const Projects = () => {
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-black font-semibold">{project.name}</h3>
+                    <h3 className="text-black font-semibold">{project.myname}</h3>
                     <span className="text-black/50 text-xs">
                       {project.date}
                     </span>
@@ -380,32 +380,42 @@ const Projects = () => {
               </div>
             </div>
             {/* Content (Description + Tech Stack) */}
-            <p className="text-black/90 text-sm overflow-hidden mt-5 mb-3">{project.description}</p>
+            <hr></hr>
+
             {/* Image */}
-            <div className="mb-4 w-full overflow-hidden rounded-lg">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            {project.contributors && project.contributors.length > 0 && (
-              <div className="mt-2">
-                <h2 className="font-bold text-lg text-black">Contributors</h2>
-                {project.contributors.map((contributor, index) => (
-                  <a
-                    key={index}
-                    href={contributor.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center mb-2 md:my-2 px-2 py-2 border border-white rounded-lg bg-gray-900/70 text-white font-thin text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
-                  >
-                    <FaGithub className="mr-2 text-lg" />
-                    {contributor.name}
-                  </a>
-                ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 mb-3 mt-3 gap-4 rounded-lg">
+              <div className="overflow-hidden rounded-lg">
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                />
               </div>
-            )}
+              <div>
+                <h1 className="text-black font-bold text-[30px]">{project.name}</h1>
+                <p className="text-black/90 text-sm overflow-hidden mt-3 mb-3">{project.description}</p>
+                {project.contributors && project.contributors.length > 0 && (
+                  <div className="mt-2">
+                    <h2 className="font-bold text-lg text-black">Contributors</h2>
+                    {project.contributors.map((contributor, index) => (
+                      <a
+                        key={index}
+                        href={contributor.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center mb-2 md:my-2 px-2 py-2 border border-white rounded-lg bg-gray-900/70 text-white font-thin text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
+                      >
+                        <FaGithub className="mr-2 text-lg" />
+                        {contributor.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+
+            </div>
+
 
             <a
               href={project.github}

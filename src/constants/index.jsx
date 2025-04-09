@@ -144,7 +144,12 @@ export const otherskills = [
 const Description = [
   {
     description1:
-      "This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine."
+      `This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
+      This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
+      This is my application.
+      This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
+      This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
+      This is my application.`
   },
   {
     description2:
@@ -162,6 +167,7 @@ export const BIO = {
 export const projects = [
   {
     id: 1,
+    myname: "kaungkhantcoder",
     name: "My Portfolio",
     image: projectImage1,
     date: "April 2, 2025",
@@ -171,6 +177,7 @@ export const projects = [
   },
   {
     id: 2,
+    myname: "kaungkhantcoder",
     name: "Leaf-It",
     image: projectImage2,
     date: "December 15, 2024",
@@ -184,6 +191,7 @@ export const projects = [
   },
   {
     id: 3,
+    myname: "kaungkhantcoder",
     name: "Project 3",
     image: projectImage1,
     date: "April 2, 2025",
@@ -195,6 +203,7 @@ export const projects = [
   },
   {
     id: 4,
+    myname: "kaungkhantcoder",
     name: "Project 4",
     image: projectImage1,
     date: "April 2, 2025",
@@ -206,6 +215,7 @@ export const projects = [
   },
   {
     id: 5,
+    myname: "kaungkhantcoder",
     name: "Project 5",
     image: projectImage1,
     date: "April 2, 2025",
@@ -217,6 +227,7 @@ export const projects = [
   },
   {
     id: 6,
+    myname: "kaungkhantcoder",
     name: "Project 6",
     image: projectImage1,
     date: "April 2, 2025",

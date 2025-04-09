@@ -627,7 +627,7 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 rounded-xl md:p-8 bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 [clip-path:polygon(0_0,calc(100%-2rem)_0,100%_2rem,100%_100%,0_100%)]"
+            className="relative p-6 rounded-xl md:p-8 bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 "
           >
             <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-blue-300/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
