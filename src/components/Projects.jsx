@@ -415,8 +415,6 @@ const Projects = () => {
 
 
             </div>
-
-
             <a
               href={project.github}
               target="_blank"

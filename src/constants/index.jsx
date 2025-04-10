@@ -164,6 +164,22 @@ export const BIO = {
 
 };
 
+export const CERTIFICATES = [
+  {
+    name: "Certificate Name 1",
+    issuer: "Issuing Organization",
+    date: "April 2, 2025",
+    image: projectImage1
+  },
+  {
+    name: "Certificate Name 2",
+    issuer: "Issuing Organization",
+    date: "April 2, 2025",
+    image: projectImage2
+  },
+  // Add more certificates as needed
+];
+
 export const projects = [
   {
     id: 1,
