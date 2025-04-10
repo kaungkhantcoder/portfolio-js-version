@@ -156,7 +156,7 @@ const Hero = () => {
           </motion.div>
 
 
-          {/* Box 4 - Experience (Middle Right, Wide) */}
+          {/* Box 4 - Interest */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
@@ -168,16 +168,16 @@ const Hero = () => {
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
                 <span className="inline-block w-8 h-1 bg-purple-400 mr-2"></span> Interest
               </h3>
-              <div className="flex flex-wrap gap-6 md:gap-3">
+              <div className="flex flex-wrap gap-3">
                 {INTEREST.map((INTEREST, index) => {
                   const Icon = INTEREST.icon;
                   return (
                     <motion.div
                       key={index}
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="flex items-center space-x-2 bg-black/50 p-3 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-colors"
+                      className="flex items-center  bg-black/50 p-3 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-colors"
                     >
-                      <Icon className="text-xl md:text-2xl text-gray-300 hover:text-purple-400" />
+                      <Icon className="text-xl md:text-2xl mr-2 text-gray-300 hover:text-purple-400" />
                       <p className="text-xs md:text-sm text-gray-300 hover:text-white">{INTEREST.name}</p>
                     </motion.div>
                   );
@@ -231,7 +231,7 @@ const Hero = () => {
                     <motion.div
                       key={index}
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="flex items-center space-x-2 bg-gray-600/30 hover:bg-gray-900/80 p-3 rounded-lg border border-white/20 hover:border-white hover:font-medium transition-colors"
+                      className="flex items-center space-x-2 bg-gray-600/30 hover:bg-gray-900/90 p-3 rounded-lg border border-white/20 hover:border-white hover:font-medium transition-colors"
                     >
                       <Icon className="text-xl md:text-2xl mr-2" />
                       <p className="text-xs md:text-sm">{SKILLS.name}</p>
@@ -277,7 +277,7 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-gradient-to-b from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
+            className="relative p-4 rounded-xl bg-gradient-to-b from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 via-transparent to-yellow-500/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
@@ -292,12 +292,12 @@ const Hero = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="w-full max-w-[300px] bg-gray-500/20 drop-shadow-lg rounded-lg p-3"
+                  className="w-full bg-gray-500/20 drop-shadow-lg rounded-lg p-3"
                 >
                   <img
                     src={CERTIFICATES[currentCertIndex].image}
                     alt={CERTIFICATES[currentCertIndex].name}
-                    className="w-full h-[135px] object-cover rounded-md mb-2"
+                    className="w-full h-full object-cover rounded-md mb-2"
                   />
                   <div className="grid grid-cols-2">
                     <div className="text-start">

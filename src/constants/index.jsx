@@ -141,6 +141,12 @@ export const otherskills = [
   { name: "Time Management", icon: FaUserClock },
 ];
 
+export const STACKS = [
+  { id: 1, icon: FaPython},
+  { id: 2, icon: FaPython},
+  { id: 3, icon: FaPython},
+]
+
 const Description = [
   {
     description1:
@@ -148,8 +154,7 @@ const Description = [
       This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
       This is my application.
       This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
-      This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
-      This is my application.`
+      This is making in one day, You can chat with our bot, that's excaetly,`
   },
   {
     description2:

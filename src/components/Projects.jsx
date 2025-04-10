@@ -335,8 +335,9 @@
 // export default Projects;
 
 import { useState } from "react";
-import { projects, profile } from "../constants";
+import { projects, profile, STACKS } from "../constants";
 import { FaGithub } from "react-icons/fa6";
+
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false); // State to toggle between 4 and all projects
@@ -347,11 +348,11 @@ const Projects = () => {
       <h1 className="text-left p-6 text-[40px] md:text-[70px] text-black">
         My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span>
       </h1>
-      <div className="grid items-start grid-cols-1 gap-4 p-6 w-full mx-auto">
+      <div className="grid items-start gird-cols-1 gap-4 p-6 w-full mx-auto">
         {visibleProjects.map((project) => (
           <div
             key={project.id}
-            className="bg-white rounded-xl p-4  shadow-lg"
+            className="bg-white rounded-lg shadow-lg p-4"
           >
             {/* Header (Avatar, Name, Date) */}
             <div className="flex items-center mb-3">
@@ -383,27 +384,35 @@ const Projects = () => {
             <hr></hr>
 
             {/* Image */}
-            <div className="grid grid-cols-1 md:grid-cols-2 mb-3 mt-3 gap-4 rounded-lg">
-              <div className="overflow-hidden rounded-lg">
-                <img
-                  src={project.image}
-                  alt={project.name}
-                  className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 mb-3 mt-3 gap-4 rounded-lg">
+
+              <div className="p-2  md:border-r-2 md:border-gray-300">
                 <h1 className="text-black font-bold text-[30px]">{project.name}</h1>
                 <p className="text-black/90 text-sm overflow-hidden mt-3 mb-3">{project.description}</p>
+              </div>
+
+              <div className="p-3 bg-gray-300/20 border border-gray-400 shadow-xl rounded-lg">
+                <div className="overflow-hidden rounded-lg">
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+              </div>
+
+              <div className="grid grid-cols-1">
                 {project.contributors && project.contributors.length > 0 && (
-                  <div className="mt-2">
-                    <h2 className="font-bold text-lg text-black">Contributors</h2>
+                  <div className="mt-2 md:mt-0 bg-gray-300/20 border border-gray-400 rounded-lg p-2">
+                    <h2 className="font-bold text-lg text-black mb-2">Contributors</h2>
                     {project.contributors.map((contributor, index) => (
                       <a
                         key={index}
                         href={contributor.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center mb-2 md:my-2 px-2 py-2 border border-white rounded-lg bg-gray-900/70 text-white font-thin text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
+                        className="inline-flex items-center mb-2 px-2 py-2 border border-white rounded-lg bg-gray-900/70 text-white font-thin text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
                       >
                         <FaGithub className="mr-2 text-lg" />
                         {contributor.name}
@@ -411,9 +420,22 @@ const Projects = () => {
                     ))}
                   </div>
                 )}
+
+                <div className="mt-2 bg-gray-300/20 border border-gray-400 p-2 rounded-lg">
+                  <h1 className="font-bold text-black text-xl">Tech Stacks</h1>
+                  {STACKS.map((STACKS, index) => {
+                    const Icon = STACKS.icon;
+                    return (
+                      <div
+                        key={index}
+                        className="inline-flex items-center cursor-pointer mb-2 md:my-2 px-2 py-2 border border-gray-900/50 rounded-full bg-gradient-to-tr from-black to-gray-700 text-white font-thin text-[11px] transition-all duration-300 hover:scale-105 mr-3"
+                      >
+                        <Icon className="text-xl text-center md:text-3xl" />
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-
-
             </div>
             <a
               href={project.github}
