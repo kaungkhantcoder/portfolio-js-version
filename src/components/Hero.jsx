@@ -286,36 +286,40 @@ const Hero = () => {
               </h3>
 
               <div className="relative overflow-hidden">
-                <motion.div
-                  key={currentCertIndex} // Key changes trigger animation
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-full bg-gray-500/20 drop-shadow-lg rounded-lg p-3"
-                >
-                  <img
-                    src={CERTIFICATES[currentCertIndex].image}
-                    alt={CERTIFICATES[currentCertIndex].name}
-                    className="w-full h-full object-cover rounded-md mb-2"
-                  />
-                  <div className="grid grid-cols-2">
-                    <div className="text-start">
-                      <p className="text-sm font-medium text-white">
-                        {CERTIFICATES[currentCertIndex].name}
-                      </p>
-                      <p className="text-xs text-gray-400">
-                        {CERTIFICATES[currentCertIndex].issuer}
-                      </p>
-                    </div>
-                    <div className="text-end">
-                      <p className="text-xs text-gray-500">
-                        {CERTIFICATES[currentCertIndex].date}
-                      </p>
-                    </div>
+                <div className="w-full  h-full md:h-[260px]">
+                  <motion.div
+                    key={currentCertIndex} // Key changes trigger animation
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full bg-gray-500/20 drop-shadow-lg rounded-lg p-3"
+                  >
+                    <img
+                      src={CERTIFICATES[currentCertIndex].image}
+                      alt={CERTIFICATES[currentCertIndex].name}
+                      className="w-full h-full object-cover rounded-md mb-2"
+                    />
+                    <div className="grid grid-cols-2">
+                      <div className="text-start">
+                        <p className="text-sm font-medium text-white">
+                          {CERTIFICATES[currentCertIndex].name}
+                        </p>
+                        <p className="text-xs text-gray-400">
+                          {CERTIFICATES[currentCertIndex].issuer}
+                        </p>
+                      </div>
+                      <div className="text-end">
+                        <p className="text-xs text-gray-500">
+                          {CERTIFICATES[currentCertIndex].date}
+                        </p>
+                      </div>
 
-                  </div>
-                </motion.div>
+                    </div>
+                  </motion.div>
+
+                </div>
+
               </div>
             </div>
             <div className="absolute top-4 right-4 w-10 h-10 border-t-2 border-r-2 border-orange-400/30 rounded-tr-xl"></div>

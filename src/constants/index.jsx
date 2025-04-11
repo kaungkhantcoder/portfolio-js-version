@@ -54,7 +54,7 @@ import projectImage2 from "../assets/Project_Leaf_It.png";
 
 import { SiMongodb, SiDjango, SiMysql, SiFlask } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
-import { FaNodeJs, FaAssistiveListeningSystems, FaBrain, FaFlagUsa, FaUserClock } from "react-icons/fa";
+import { FaNodeJs, FaAssistiveListeningSystems, FaBrain, FaFlagUsa, FaUserClock, FaKeyboard } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAddressCard } from "react-icons/fa";
 
@@ -134,6 +134,7 @@ export const INTEREST = [
 export const otherskills = [
   { name: "Communication", icon: MdPublic },
   { name: "Teamwork", icon: FaPeopleGroup },
+  { name: "80 WPM", icon: FaKeyboard },
   { name: "Problem Solving", icon: FaLightbulb },
   { name: "Active Listening", icon: FaAssistiveListeningSystems },
   { name: "Critical Thinking", icon: FaBrain },

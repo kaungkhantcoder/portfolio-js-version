@@ -384,9 +384,9 @@ const Projects = () => {
             <hr></hr>
 
             {/* Image */}
-            <div className="grid grid-cols-1 md:grid-cols-3 mb-3 mt-3 gap-4 rounded-lg">
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 mb-3 mt-3 gap-4 rounded-lg">
 
-              <div className="p-2  md:border-r-2 md:border-gray-300">
+              <div className="p-2 md:border-r-2 md:border-gray-300">
                 <h1 className="text-black font-bold text-[30px]">{project.name}</h1>
                 <p className="text-black/90 text-sm overflow-hidden mt-3 mb-3">{project.description}</p>
               </div>
