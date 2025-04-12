@@ -48,8 +48,8 @@ export const EmailButton = () => {
 };
 
 import profileImage from "../assets/Koderlogo.png"
-import projectImage1 from "../assets/Project1.png";
-import projectImage2 from "../assets/Project_Leaf_It.png";
+import projectImage1 from "../assets/project_pro.png";
+import projectImage2 from "../assets/Project_Leaf_It_new.png";
 
 
 import { SiMongodb, SiDjango, SiMysql, SiFlask } from "react-icons/si";
@@ -71,7 +71,7 @@ export const NAVIGATION_LINKS = [
 export const HERO = {
   name: "This is Kaung Khant",
   username: "@kaungkhantcoder",
-  greet: "Hello there! 👋🏻",
+  greet: "Hello there!",
   job: "Technophile",
   ph_num: "+959976126328",
 };
@@ -143,9 +143,9 @@ export const otherskills = [
 ];
 
 export const STACKS = [
-  { id: 1, icon: FaPython},
-  { id: 2, icon: FaPython},
-  { id: 3, icon: FaPython},
+  { id: 1, icon: FaPython },
+  { id: 2, icon: FaPython },
+  { id: 3, icon: FaPython },
 ]
 
 const Description = [
@@ -186,77 +186,157 @@ export const CERTIFICATES = [
   // Add more certificates as needed
 ];
 
+// export const projects = [
+//   {
+//     id: 1,
+//     myname: "kaungkhantcoder",
+//     name: "My Portfolio",
+//     image: projectImage1,
+//     date: "April 2, 2025",
+//     description: Description[0].description1,
+//     github: "https://github.com",
+//     contributors: [], // No contributors
+//   },
+//   {
+//     id: 2,
+//     myname: "kaungkhantcoder",
+//     name: "Leaf-It",
+//     image: projectImage2,
+//     date: "December 15, 2024",
+//     description: Description[1].description2,
+//     github: "https://github.com/kaungkhantcoder/Simbolo-leaf-it",
+//     contributors: [
+//       { name: "David Mg Mg", url: "https://github.com/DepressoLofi" },
+//       { name: "Thant Htut Aung", url: "https://github.com/ThantHTUT" },
+//       { name: "Thet Hmue Khin", url: "https://github.com/AThet01" },
+//     ],
+//   },
+//   {
+//     id: 3,
+//     myname: "kaungkhantcoder",
+//     name: "Project 3",
+//     image: projectImage1,
+//     date: "April 2, 2025",
+//     description: "This is my application",
+//     github: "https://github.com",
+//     contributors: [
+//       { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+//     ],
+//   },
+//   {
+//     id: 4,
+//     myname: "kaungkhantcoder",
+//     name: "Project 4",
+//     image: projectImage1,
+//     date: "April 2, 2025",
+//     description: "This is my application",
+//     github: "https://github.com",
+//     contributors: [
+//       { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+//     ],
+//   },
+//   {
+//     id: 5,
+//     myname: "kaungkhantcoder",
+//     name: "Project 5",
+//     image: projectImage1,
+//     date: "April 2, 2025",
+//     description: "This is my application",
+//     github: "https://github.com",
+//     contributors: [
+//       { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+//     ],
+//   },
+//   {
+//     id: 6,
+//     myname: "kaungkhantcoder",
+//     name: "Project 6",
+//     image: projectImage1,
+//     date: "April 2, 2025",
+//     description: "This is my application",
+//     github: "https://github.com",
+//     contributors: [
+//       { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+//     ],
+//   },
+// ];
+
 export const projects = [
   {
     id: 1,
-    myname: "kaungkhantcoder",
-    name: "My Portfolio",
+    category: "AI Projects",
+    name: "AI Chat bot system",
+    description: "This chat bot can chat with everything you need to know.",
     image: projectImage1,
-    date: "April 2, 2025",
-    description: Description[0].description1,
     github: "https://github.com",
-    contributors: [], // No contributors
+    contributors: [
+      { name: "kaungkhantcoder", url: "https://github.com/kaungkhantcoder" }
+    ],
   },
   {
     id: 2,
-    myname: "kaungkhantcoder",
-    name: "Leaf-It",
+    category: "AI Projects",
+    name: "Welcome to Leaf-It",
+    description: "Leaf-It is a web application that provides information about plants, their care, and more.",
     image: projectImage2,
-    date: "December 15, 2024",
-    description: Description[1].description2,
-    github: "https://github.com/kaungkhantcoder/Simbolo-leaf-it",
+    github: "https://github.com",
     contributors: [
-      { name: "David Mg Mg", url: "https://github.com/DepressoLofi" },
-      { name: "Thant Htut Aung", url: "https://github.com/ThantHTUT" },
-      { name: "Thet Hmue Khin", url: "https://github.com/AThet01" },
+      { name: "kaungkhantcoder", url: "https://github.com/kaungkhantcoder" }
     ],
   },
   {
     id: 3,
-    myname: "kaungkhantcoder",
-    name: "Project 3",
+    category: "AI Projects",
+    name: "Welcome to Leaf-It",
+    description: "Leaf-It is a web application that provides information about plants, their care, and more.",
     image: projectImage1,
-    date: "April 2, 2025",
-    description: "This is my application",
     github: "https://github.com",
     contributors: [
-      { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+      { name: "kaungkhantcoder", url: "https://github.com/kaungkhantcoder" }
     ],
   },
   {
     id: 4,
-    myname: "kaungkhantcoder",
-    name: "Project 4",
+    category: "Web Projects",
+    name: "E-commerce Website",
+    description: "This website can buy everything you want.",
     image: projectImage1,
-    date: "April 2, 2025",
-    description: "This is my application",
     github: "https://github.com",
     contributors: [
-      { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+      { name: "kaungkhantcoder", url: "https://github.com/kaungkhantcoder" }
     ],
   },
   {
     id: 5,
-    myname: "kaungkhantcoder",
-    name: "Project 5",
+    category: "Web Projects",
+    name: "Welcome to Leaf-It",
+    description: "Leaf-It is a web application that provides information about plants, their care, and more.",
     image: projectImage1,
-    date: "April 2, 2025",
-    description: "This is my application",
     github: "https://github.com",
     contributors: [
-      { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+      { name: "kaungkhantcoder", url: "https://github.com/kaungkhantcoder" }
     ],
   },
   {
     id: 6,
-    myname: "kaungkhantcoder",
-    name: "Project 6",
+    category: "AI Projects",
+    name: "Welcome to Leaf-It",
+    description: "Leaf-It is a web application that provides information about plants, their care, and more.",
     image: projectImage1,
-    date: "April 2, 2025",
-    description: "This is my application",
     github: "https://github.com",
     contributors: [
-      { name: "kaungkhant", url: "https://github.com/kaungkhant" }
+      { name: "kaungkhantcoder", url: "https://github.com/kaungkhantcoder" }
+    ],
+  },
+  {
+    id: 7,
+    category: "Web Projects",
+    name: "Welcome to Leaf-It",
+    description: "Leaf-It is a web application that provides information about plants, their care, and more.",
+    image: projectImage1,
+    github: "https://github.com",
+    contributors: [
+      { name: "kaungkhantcoder", url: "https://github.com/kaungkhantcoder" }
     ],
   },
 ];

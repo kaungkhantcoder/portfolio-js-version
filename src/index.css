@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+/* @layer utilities {
   .grid-bg-hero-light {
     @apply inset-0 bg-[size:24px_24px] bg-[position:-1px_-1px] bg-[linear-gradient(to_right,#00000020,transparent_1px),linear-gradient(to_bottom,#00000020,transparent_1px)];
   }
-}
+} */
 
 html, body {
   height: 100%;
@@ -17,12 +18,11 @@ html, body {
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
-  background: #f2f2f2; /* Or #fff, depending on your theme */
+  font-family: "Inter", sans-serif;
+  background: #000; /* Or #fff, depending on your theme */
   color: white; /* Or black */
   overflow-x: hidden;
   user-select: none;
-  @apply grid-bg-hero-light;
 }
 
 h1 {

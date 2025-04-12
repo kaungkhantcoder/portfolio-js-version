@@ -57,60 +57,71 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative flex w-full items-center justify-center min-h-screen text-center rounded-3xl  border border-white/20 py-2 mt-[30px] overflow-hidden bg-black text-white"
+      className="relative flex w-screen items-center justify-center min-h-screen  text-center rounded-3xl py-2 mt-[30px] overflow-hidden "
     >
-      <div className="flex flex-col w-full max-w-6xl mx-auto p-5 md:p-10 gap-6">
+      <div className="flex flex-col w-full max-w-6xl mx-auto p-5 md:p-10 gap-6 ">
         {/* Top Section - Profile Info */}
-        <div className="flex flex-col items-center justify-center z-10 mb-6">
-          <h1 className="my-5 text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-tighter">
-            {HERO.greet}
-          </h1>
-          <h1 className="text-2xl m-2 md:m-3 sm:text-5xl md:text-4xl lg:text-[5rem] font-bold">
-            {HERO.name}
-          </h1>
-          <div className="items-center mt-3 md:mt-7 backdrop-blur-lg border border-green-500 text-center rounded-lg hover:scale-105 transition font-medium text-white">
-            <h1 className="p-3 md:p-4 text-2xl md:text-3xl lg:text-[3rem] font-bold">
-              <span className="inline-block w-4 h-1 bg-green-400 mr-2"></span> {HERO.job}
-            </h1>
-          </div>
-          <h1 className="mt-5 p-2 text-lg md:text-2xl lg:text-[17px] font-bold">
-            {HERO.username}
-          </h1>
-          {/* Lottie Animation Container */}
-          <div
-            ref={lottieContainer}
-            className="w-full h-[200px] mt-4"
-            style={{ position: "relative" }}
-          ></div>
-          <div className="relative inline-block my-8">
-            {/* Ping Dot */}
-            <span className="absolute -top-1 -right-1 flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-            </span>
+        <div className="relative z-10 text-white px-6 py-12 md:py-24">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-            {/* Button */}
-            <a
-              href="/cv.pdf"
-              download
-              className="inline-flex items-center px-5 py-2.5 border border-white rounded-lg bg-gray-900/80 text-white font-medium text-sm shadow-sm transition-all duration-300 hover:bg-white hover:text-black"
+            {/* Text Section */}
+            <div className="text-start space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                {HERO.greet}
+              </h1>
+
+              <h2 className="text-3xl md:text-5xl font-bold text-white">
+                {HERO.name}
+              </h2>
+
+              <div className="inline-block backdrop-blur-md border border-[#76B900] rounded-xl px-6 py-3 hover:scale-105 transition-transform">
+                <h3 className="text-xl md:text-2xl font-semibold tracking-wide">
+                  <span className="inline-block w-5 h-1 bg-[#76B900] mr-3 rounded"></span>
+                  {HERO.job}
+                </h3>
+              </div>
+
+              <p className="text-lg md:text-xl lg:text-2xl font-medium text-gray-300">
+                {HERO.username}
+              </p>
+
+              {/* Button */}
+              <div className="relative mt-6 inline-block">
+                <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#76B900] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#b9ff41]"></span>
+                </span>
+                <a
+                  href="/cv.pdf"
+                  download
+                  className="inline-flex items-center px-6 py-3 bg-[#76B900] hover:bg-white hover:text-black transition-colors text-sm font-semibold"
+                >
+                  Explore My CV
+                  <SiReaddotcv className="ml-2 text-base" />
+                </a>
+              </div>
+            </div>
+
+            {/* Animation Section */}
+            <div ref={lottieContainer} className="w-full md:pl-10 h-[400px]">
+            </div>
+          </div>
+
+          {/* Scroll Down Icon */}
+          <div className="flex justify-center mt-16">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              strokeWidth={2.5} stroke="currentColor"
+              className="w-12 h-12 animate-bounce border border-white rounded-full p-3 text-[#76B900]"
             >
-              Explore My CV
-              <SiReaddotcv className="ml-2 text-lg" />
-            </a>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+            </svg>
           </div>
-
-
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-[50px] h-[50px] p-3 mt-6 animate-bounce border border-white rounded-full">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-          </svg>
-
         </div>
+
 
 
         {/* Bento Grid - Improved Layout */}
         <div id="about" className="grid grid-cols-1 md:grid-cols-6  grid-rows-1 md:grid-rows-1 gap-3 md:gap-6 w-full min-h-[600px]">
-
 
           {/* Box 1 - About Me (Top Right, Wide) */}
           <motion.div

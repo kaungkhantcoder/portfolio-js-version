@@ -334,131 +334,400 @@
 
 // export default Projects;
 
-import { useState } from "react";
-import { projects, profile, STACKS } from "../constants";
-import { FaGithub } from "react-icons/fa6";
+// import { useState } from "react";
+// import { projects, profile, STACKS } from "../constants";
+// import { FaGithub } from "react-icons/fa6";
 
 
-const Projects = () => {
-  const [showAll, setShowAll] = useState(false); // State to toggle between 4 and all projects
-  const visibleProjects = showAll ? projects : projects.slice(0, 4); // Show 4 projects or all
+// const Projects = () => {
+//   const [showAll, setShowAll] = useState(false); // State to toggle between 4 and all projects
+//   const visibleProjects = showAll ? projects : projects.slice(0, 4); // Show 4 projects or all
+
+//   return (
+//     <div id='projects'>
+//       <h1 className="text-left p-6 text-[40px] md:text-[70px] text-black">
+//         My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span>
+//       </h1>
+//       <div className="grid items-start gird-cols-1 gap-4 p-6 w-full mx-auto">
+//         {visibleProjects.map((project) => (
+//           <div
+//             key={project.id}
+//             className="bg-white rounded-lg shadow-lg p-4"
+//           >
+//             {/* Header (Avatar, Name, Date) */}
+//             <div className="flex items-center mb-3">
+//               <img
+//                 src={profile.image}
+//                 alt={project.name}
+//                 className="w-10 h-10 rounded-full flex-shrink-0 mr-3 flex items-center justify-center text-white font-bold text-sm"
+//               />
+//               <div className="flex-1">
+//                 <div className="flex items-center justify-between">
+//                   <div>
+//                     <h3 className="text-black font-semibold">{project.myname}</h3>
+//                     <span className="text-black/50 text-xs">
+//                       {project.date}
+//                     </span>
+//                   </div>
+//                   <a
+//                     href={project.github}
+//                     target="_blank"
+//                     rel="noopener noreferrer"
+//                     className="hidden md:block bg-black/90 text-white px-4 py-1.5 rounded-md text-sm font-medium hover:scale-105 transition duration-200"
+//                   >
+//                     View on GitHub
+//                   </a>
+//                 </div>
+//               </div>
+//             </div>
+//             {/* Content (Description + Tech Stack) */}
+//             <hr></hr>
+
+//             {/* Image */}
+//             <div className="grid sm:grid-cols-1 md:grid-cols-3 mb-3 mt-3 gap-4 rounded-lg">
+
+//               <div className="p-2 md:border-r-2 md:border-gray-300">
+//                 <h1 className="text-black font-bold text-[30px]">{project.name}</h1>
+//                 <p className="text-black/90 text-sm overflow-hidden mt-3 mb-3">{project.description}</p>
+//               </div>
+
+//               <div className="p-3 bg-gray-300/20 border border-gray-400 shadow-xl rounded-lg">
+//                 <div className="overflow-hidden rounded-lg">
+//                   <img
+//                     src={project.image}
+//                     alt={project.name}
+//                     className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+//                   />
+//                 </div>
+
+//               </div>
+
+//               <div className="grid grid-cols-1">
+//                 {project.contributors && project.contributors.length > 0 && (
+//                   <div className="mt-2 md:mt-0 bg-gray-300/20 border border-gray-400 rounded-lg p-2">
+//                     <h2 className="font-bold text-lg text-black mb-2">Contributors</h2>
+//                     {project.contributors.map((contributor, index) => (
+//                       <a
+//                         key={index}
+//                         href={contributor.url}
+//                         target="_blank"
+//                         rel="noopener noreferrer"
+//                         className="inline-flex items-center mb-2 px-2 py-2 border border-white rounded-lg bg-gray-900/70 text-white font-thin text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
+//                       >
+//                         <FaGithub className="mr-2 text-lg" />
+//                         {contributor.name}
+//                       </a>
+//                     ))}
+//                   </div>
+//                 )}
+
+//                 <div className="mt-2 bg-gray-300/20 border border-gray-400 p-2 rounded-lg">
+//                   <h1 className="font-bold text-black text-xl">Tech Stacks</h1>
+//                   {STACKS.map((STACKS, index) => {
+//                     const Icon = STACKS.icon;
+//                     return (
+//                       <div
+//                         key={index}
+//                         className="inline-flex items-center cursor-pointer mb-2 md:my-2 px-2 py-2 border border-gray-900/50 rounded-full bg-gradient-to-tr from-black to-gray-700 text-white font-thin text-[11px] transition-all duration-300 hover:scale-105 mr-3"
+//                       >
+//                         <Icon className="text-xl text-center md:text-3xl" />
+//                       </div>
+//                     );
+//                   })}
+//                 </div>
+//               </div>
+//             </div>
+//             <a
+//               href={project.github}
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="md:hidden bg-black/90 text-white hover:text-black hover:bg-black px-4 py-1.5 rounded-md md:text[16px] text-[12px] font-medium hover:scale-105 transition duration-200"
+//             >
+//               View on GitHub
+//             </a>
+//           </div>
+//         ))}
+//         {/* See More / Show Less Button */}
+//         {projects.length > 4 && (
+//           <div className="col-span-full flex justify-center mt-6">
+//             <button
+//               onClick={() => setShowAll(!showAll)}
+//               className="px-6 py-2 rounded-xl bg-black text-white border border-gray-700/50 hover:bg-white hover:text-black transition-colors text-sm font-medium"
+//             >
+//               {showAll ? "Show Less" : "See More"}
+//             </button>
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Projects;
+
+
+import { useState, useRef } from "react";
+import { projects } from "../constants";
+import { FaGithub } from "react-icons/fa";
+import { MdArrowForwardIos, MdArrowBackIosNew } from "react-icons/md";
+
+// Group projects by category
+const groupProjectsByCategory = (projects) => {
+  return projects.reduce((acc, project) => {
+    const category = project.category || "Uncategorized";
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(project);
+    return acc;
+  }, {});
+};
+
+const ProjectCarousel = ({ category, projects }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const projectsPerPage = 2; // Show 2 projects at a time
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  // Touch swipe state
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+
+  // Progress bar drag state
+  const progressBarRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  // Handle navigation
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 >= totalPages ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex - 1 < 0 ? totalPages - 1 : prevIndex - 1
+    );
+  };
+
+  // Handle touch start
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  // Handle touch move
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  // Handle touch end
+  const handleTouchEnd = () => {
+    if (touchStartX.current && touchEndX.current) {
+      const diffX = touchStartX.current - touchEndX.current;
+      const swipeThreshold = 50; // Minimum distance to consider it a swipe
+
+      if (Math.abs(diffX) > swipeThreshold) {
+        if (diffX > 0) {
+          // Swiped left, go to next
+          handleNext();
+        } else {
+          // Swiped right, go to previous
+          handlePrev();
+        }
+      }
+    }
+    // Reset touch positions
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
+  // Handle progress bar drag
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    updateProgress(e);
+  };
+
+  const handleMouseMove = (e) => {
+    if (isDragging) {
+      updateProgress(e);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const updateProgress = (e) => {
+    const rect = progressBarRef.current.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const width = rect.width;
+    const newProgress = Math.min(Math.max(offsetX / width, 0), 1); // Between 0 and 1
+    const newIndex = Math.round(newProgress * (totalPages - 1));
+    setCurrentIndex(newIndex);
+  };
+
+  // Calculate progress for the green bar
+  const progress = ((currentIndex + 1) / totalPages) * 100;
+
+  // Group projects into pages
+  const projectPages = [];
+  for (let i = 0; i < projects.length; i += projectsPerPage) {
+    projectPages.push(projects.slice(i, i + projectsPerPage));
+  }
+
+  // Define category descriptions
+  const categoryInfo = {
+    "AI Projects": {
+      description:
+        "These are my AI projects, I usually used these technologies and tech stack [Python, TensorFlow, NumPy, Pandas] for my projects.",
+    },
+    "Web Projects": {
+      description:
+        "These are my Web projects, I usually used these technologies and tech stack [React, Tailwind, Python, Javascript] for my projects.",
+    },
+  };
+
+  const { description } = categoryInfo[category] || {
+    description: "These are my projects.",
+  };
 
   return (
-    <div id='projects'>
-      <h1 className="text-left p-6 text-[40px] md:text-[70px] text-black">
-        My Works <span className="inline-block w-8 h-1 bg-black mr-2"></span>
-      </h1>
-      <div className="grid items-start gird-cols-1 gap-4 p-6 w-full mx-auto">
-        {visibleProjects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-white rounded-lg shadow-lg p-4"
-          >
-            {/* Header (Avatar, Name, Date) */}
-            <div className="flex items-center mb-3">
-              <img
-                src={profile.image}
-                alt={project.name}
-                className="w-10 h-10 rounded-full flex-shrink-0 mr-3 flex items-center justify-center text-white font-bold text-sm"
-              />
-              <div className="flex-1">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <h3 className="text-black font-semibold">{project.myname}</h3>
-                    <span className="text-black/50 text-xs">
-                      {project.date}
-                    </span>
-                  </div>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hidden md:block bg-black/90 text-white px-4 py-1.5 rounded-md text-sm font-medium hover:scale-105 transition duration-200"
-                  >
-                    View on GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Content (Description + Tech Stack) */}
-            <hr></hr>
+    <div className="w-screen p-10 bg-white">
+      {/* Section Header */}
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-left text-[40px] md:text-[50px] text-black uppercase">
+          {category}
+        </h1>
 
-            {/* Image */}
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 mb-3 mt-3 gap-4 rounded-lg">
+      </div>
 
-              <div className="p-2 md:border-r-2 md:border-gray-300">
-                <h1 className="text-black font-bold text-[30px]">{project.name}</h1>
-                <p className="text-black/90 text-sm overflow-hidden mt-3 mb-3">{project.description}</p>
-              </div>
-
-              <div className="p-3 bg-gray-300/20 border border-gray-400 shadow-xl rounded-lg">
-                <div className="overflow-hidden rounded-lg">
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="w-full h-full object-cover rounded-lg hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-
-              </div>
-
-              <div className="grid grid-cols-1">
-                {project.contributors && project.contributors.length > 0 && (
-                  <div className="mt-2 md:mt-0 bg-gray-300/20 border border-gray-400 rounded-lg p-2">
-                    <h2 className="font-bold text-lg text-black mb-2">Contributors</h2>
-                    {project.contributors.map((contributor, index) => (
-                      <a
-                        key={index}
-                        href={contributor.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center mb-2 px-2 py-2 border border-white rounded-lg bg-gray-900/70 text-white font-thin text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
-                      >
-                        <FaGithub className="mr-2 text-lg" />
-                        {contributor.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-
-                <div className="mt-2 bg-gray-300/20 border border-gray-400 p-2 rounded-lg">
-                  <h1 className="font-bold text-black text-xl">Tech Stacks</h1>
-                  {STACKS.map((STACKS, index) => {
-                    const Icon = STACKS.icon;
-                    return (
-                      <div
-                        key={index}
-                        className="inline-flex items-center cursor-pointer mb-2 md:my-2 px-2 py-2 border border-gray-900/50 rounded-full bg-gradient-to-tr from-black to-gray-700 text-white font-thin text-[11px] transition-all duration-300 hover:scale-105 mr-3"
-                      >
-                        <Icon className="text-xl text-center md:text-3xl" />
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="md:hidden bg-black/90 text-white hover:text-black hover:bg-black px-4 py-1.5 rounded-md md:text[16px] text-[12px] font-medium hover:scale-105 transition duration-200"
-            >
-              View on GitHub
-            </a>
-          </div>
-        ))}
-        {/* See More / Show Less Button */}
-        {projects.length > 4 && (
-          <div className="col-span-full flex justify-center mt-6">
+      {/* Main Content */}
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* Left Side Description */}
+        <div className="md:w-1/3">
+          <p className="text-black/70 text-lg">{description}</p>
+          <div className="hidden md:flex md:mt-10 items-center p-10 space-x-2">
             <button
-              onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2 rounded-xl bg-black text-white border border-gray-700/50 hover:bg-white hover:text-black transition-colors text-sm font-medium"
+              onClick={handlePrev}
+              className="p-5 bg-[#76B900] hover:bg-[#66B933] transition"
             >
-              {showAll ? "Show Less" : "See More"}
+              <MdArrowBackIosNew className="text-black" />
+            </button>
+            <button
+              onClick={handleNext}
+              className="p-5 bg-[#76B900] hover:bg-[#66B933] transition"
+            >
+              <MdArrowForwardIos className="text-black" />
             </button>
           </div>
-        )}
+        </div>
+
+        {/* Right Side Carousel */}
+        <div
+          className="md:w-2/3 flex overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <div
+            className="flex transition-transform duration-500"
+            style={{
+              transform: `translateX(-${currentIndex * 100}%)`,
+              width: `${totalPages * 100}%`,
+            }}
+          >
+            {projectPages.map((pageProjects, pageIndex) => (
+              <div
+                key={pageIndex}
+                className="w-full flex-shrink-0 grid grid-cols-1 md:grid-cols-2 p-3 gap-4"
+              >
+                {/* Projects in a Grid */}
+                {pageProjects.map((project) => (
+                  <div
+                    key={project.id}
+                    className="bg-white shadow-lg flex-shrink-0 relative hover:scale-[1.02] transition duration-200 "
+                  >
+                    {/* Buttons above the card */}
+                    <div className="absolute flex">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#76B900] text-white hover:text-white hover:bg-[#66B933] p-3 rounded-t-none rounded-md text-[10px] md:text-[13px] font-medium"
+                      >
+                        View on GitHub
+                      </a>
+                    </div>
+                    {/* Project Card Content */}
+                    <div className="mb-3">
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h5 className="text-black font-semibold text-lg">{project.name}</h5>
+                      <p className="text-black/90 text-sm mt-2">{project.description}</p>
+                      <div className="mb-2">
+                        <h1 className="text-black font-semibold mt-5 text-sm">Creator & Contributors</h1>
+                        {
+                          project.contributors.map((contributor, index) => (
+                            <a
+                              key={index}
+                              href={contributor.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex mt-2 items-center mb-2 p-2 border border-white rounded-lg bg-gray-900/70 text-white font-medium text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
+                            >
+                              <FaGithub className="mr-2 text-lg" />
+                              {contributor.name}
+                            </a>
+                          ))
+                        }
+                      </div>
+
+
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
+
+      {/* Interactive Progress Bar */}
+      <div
+        className="mt-4 cursor-pointer"
+        ref={progressBarRef}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      >
+        <div className="w-full h-[7px] bg-gray-200 rounded-full">
+          <div
+            className="h-[7px] bg-[#76B900] transition-all duration-500"
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Projects = () => {
+  const groupedProjects = groupProjectsByCategory(projects);
+
+  return (
+    <div id="projects">
+      {Object.entries(groupedProjects).map(([category, categoryProjects]) => (
+        <ProjectCarousel
+          key={category}
+          category={category}
+          projects={categoryProjects}
+        />
+      ))}
     </div>
   );
 };
