@@ -8,7 +8,7 @@
 
 /* @layer utilities {
   .grid-bg-hero-light {
-    @apply inset-0 bg-[size:24px_24px] bg-[position:-1px_-1px] bg-[linear-gradient(to_right,#00000020,transparent_1px),linear-gradient(to_bottom,#00000020,transparent_1px)];
+    @apply inset-0 bg-[size:24px_24px] bg-[position:-1px_-1px] bg-[linear-gradient(to_right,#ffffff20,transparent_1px),linear-gradient(to_bottom,#ffffff20,transparent_1px)];
   }
 } */
 
@@ -40,4 +40,3 @@ button {
 .pause-on-hover {
   animation-play-state: inherit;
 }
-
