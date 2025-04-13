@@ -30,8 +30,8 @@ const Navbar = () => {
   // Animation variants for the menu
   const menuVariants = {
     hidden: { opacity: 0, x: 300 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-    exit: { opacity: 0, x: 300, transition: { duration: 0.2 } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.05 } },
+    exit: { opacity: 0, x: 300, transition: { duration: 0.05 } },
   };
 
   return (
