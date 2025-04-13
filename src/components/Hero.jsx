@@ -6,6 +6,7 @@ import { SiReaddotcv } from "react-icons/si";
 import { BIO } from "../constants";
 import lottie from "lottie-web";
 import { useEffect, useRef, useState } from "react";
+import mainbg from "../assets/keyboard_books.png";
 
 
 
@@ -65,11 +66,12 @@ const Hero = () => {
         <div
           className="relative z-10 text-white bg-black bg-line rounded-2xl p-5 shadow-2xl"
           style={{
-            backgroundImage: "url('src/assets/keyboad_books.png')", // Replace with your image path
+            backgroundImage: `url(${mainbg})`, // Replace with your image path
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}
+
         >
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 border border-white/40 bg-white/10 backdrop-blur-[5px] px-5 py-3 rounded-lg gap-12 items-center">
             {/* Text Section */}
@@ -78,7 +80,7 @@ const Hero = () => {
                 {HERO.greet}
               </h1>
 
-              <h2 className="text-3xl md:text-5xl font-bold text-[#76B900] drop-shadow-md">
+              <h2 className="text-2xl md:text-5xl font-bold text-[#76B900] drop-shadow-md">
                 {HERO.name}
               </h2>
 
@@ -89,7 +91,7 @@ const Hero = () => {
                 </h3>
               </div>
 
-              <p className="text-lg md:text-xl lg:text-2xl font-medium text-white/80">
+              <p className="text-md md:text-xl font-medium text-white/80">
                 {HERO.username}
               </p>
 
