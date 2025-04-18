@@ -126,9 +126,9 @@ const ProjectCarousel = ({ category, projects }) => {
     <div className="w-screen p-10 bg-white">
       {/* Section Header */}
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-left text-[40px] md:text-[50px] text-black uppercase">
+        <p className="text-left text-[40px] md:text-[50px] text-black uppercase">
           {category}
-        </h1>
+        </p>
 
       </div>
 
@@ -136,7 +136,7 @@ const ProjectCarousel = ({ category, projects }) => {
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left Side Description */}
         <div className="md:w-1/3">
-          <p className="text-black/70 text-lg">{description}</p>
+          <h1 className="text-black/70 text-lg">{description}</h1>
           <div className="md:flex md:mt-10 md:flex-col items-start space-y-4 p-3 md:p-10">
             <div className="hidden md:flex space-x-2">
               <button
@@ -206,7 +206,7 @@ const ProjectCarousel = ({ category, projects }) => {
                     </div>
                     <div className="p-4">
                       <h5 className="text-black font-semibold text-lg">{project.name}</h5>
-                      <p className="text-black/90 text-sm mt-2">{project.description}</p>
+                      <h1 className="text-black/90 text-sm mt-2">{project.description}</h1>
                       <div className="mb-2">
                         <h1 className="text-black font-semibold mt-5 text-sm">Creator & Contributors</h1>
                         {

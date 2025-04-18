@@ -39,7 +39,7 @@ const ContactMe = () => {
           <div className="border-t border-white pt-3 mt-4 flex flex-col md:flex-row items-center justify-between text-xs">
             <p className="text-lg">+95 99 7612 6328</p>
             <div className="flex gap-4 mt-4 md:mt-0">
-              <p>&copy; {new Date().getFullYear()} kaungkhantcoder</p>
+              <h1>&copy; {new Date().getFullYear()} kaungkhantcoder</h1>
             </div>
           </div>
         </div>
