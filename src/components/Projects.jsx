@@ -123,9 +123,9 @@ const ProjectCarousel = ({ category, projects }) => {
   };
 
   return (
-    <div className="w-screen p-10 bg-white">
+    <div className="w-screen p-10 md:px-[4.5rem] lg:px-[12rem] bg-white">
       {/* Section Header */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-2">
         <p className="text-left text-[40px] md:text-[50px] text-black uppercase">
           {category}
         </p>
@@ -244,7 +244,7 @@ const ProjectCarousel = ({ category, projects }) => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        <div className="w-full h-[7px] bg-gray-200 rounded-full">
+        <div className="w-full h-[7px] bg-gray-200">
           <div
             className="h-[7px] bg-[#76B900] transition-all duration-500"
             style={{ width: `${progress}%` }}
