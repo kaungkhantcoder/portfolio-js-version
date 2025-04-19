@@ -37,7 +37,7 @@ export const EmailButton = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-[-1rem] left-1/4 transform -translate-x-1/2 px-4 py-2 bg-gray-900/90 text-white text-sm rounded-lg shadow-lg border border-gray-700/50 flex items-center"
+          className="absolute top-[-1rem] left-1/4 lg:left-[8rem] transform -translate-x-1/2 px-4 py-2 bg-gray-900/90 text-white text-sm rounded-lg shadow-lg border border-gray-700/50 flex items-center"
         >
           <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
           Email copied!
@@ -104,8 +104,8 @@ export const SKILLS = [
   { name: "Postgresql", icon: BiLogoPostgresql },
   { name: "React", icon: FaReact },
   { name: "Streamlit", icon: SiStreamlit },
-  { name: "Git", icon: FaGitAlt },
   { name: "Figma", icon: FaFigma },
+  { name: "Git", icon: FaGitAlt },
 ];
 
 import { BsCpuFill, BsRobot } from "react-icons/bs";
