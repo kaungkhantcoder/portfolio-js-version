@@ -6,7 +6,7 @@ import { SiReaddotcv } from "react-icons/si";
 import { BIO } from "../constants";
 import lottie from "lottie-web";
 import { useEffect, useRef, useState } from "react";
-import mainbg from "../assets/keyboard_books.png";
+import mainbg from "../assets/computer_keyboard_books.png";
 
 
 

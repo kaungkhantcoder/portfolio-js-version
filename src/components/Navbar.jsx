@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NAVIGATION_LINKS } from "../constants/index.jsx";
 import { motion } from "framer-motion";
-import mainbg from "../assets/computer_keyboard_books.png";
+import mainbg from "../assets/keyboard_books.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,13 +27,6 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  // Animation variants for the menu
-  const menuVariants = {
-    hidden: { opacity: 0, x: 300 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.05 } },
-    exit: { opacity: 0, x: 300, transition: { duration: 0.05 } },
-  };
-
   return (
     <nav className="fixed top-4 right-4 z-50">
       {/* Hamburger Button */}
@@ -47,7 +40,6 @@ const Navbar = () => {
       {/* Menu Dropdown */}
       {isMenuOpen && (
         <motion.div
-          variants={menuVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
