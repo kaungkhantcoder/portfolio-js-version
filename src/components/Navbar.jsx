@@ -32,7 +32,7 @@ const Navbar = () => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="p-3 rounded-lg border-b-4 border-l-2 border-[#6c9625] active:border-[#76B900] active:shadow-none shadow-lg bg-[#76B900] transition-colors focus:outline-none"
+        className="p-3 rounded-lg active:shadow-none shadow-lg bg-black transition-colors focus:outline-none"
       >
         {isMenuOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
       </button>
@@ -45,7 +45,7 @@ const Navbar = () => {
           exit="exit"
           className="fixed top-16 w-[17rem] right-6 my-2 hover:text-white bg-white drop-shadow-lg rounded-xl shadow-lg p-4"
         >
-          <span className="inline-block w-[3rem] h-1 bg-[#76B900] ml-1.5 my-3"></span>
+          <span className="inline-block w-[3rem] h-1 bg-black ml-1.5 my-3"></span>
           <ul className="grid grid-cols-2 gap-4">
             <div className="col-span-2 bg-white drop-shadow-xl rounded-md shadow-lg w-full p-[5px]">
               <img className="w-full object-cover rounded-md h-[50px]" src={mainbg} />
@@ -59,7 +59,7 @@ const Navbar = () => {
                 <a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
-                  className="rounded relative block items-center text-center px-2 py-2 cursor-pointer border-b-4 border-[#6c9625] border-l-2 active:border-[#76B900] active:shadow-none shadow-lg bg-[#76B900] hover:font-bold text-white"
+                  className="rounded relative block items-center text-center px-2 py-2 cursor-pointer active:shadow-none shadow-lg bg-black hover:font-bold text-white"
                 >
                   <span class="relative">{item.label}</span>
                 </a>

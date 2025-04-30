@@ -26,7 +26,7 @@ export const EmailButton = () => {
       <a
         onClick={handleCopyEmail}
         class="relative inline-flex items-center border-[2px] border-white/50 justify-start px-6 py-3 overflow-hidden font-bold transition-all bg-white rounded hover:bg-white group">
-        <span class="w-[310px] h-[350px] rounded rotate-[-40deg] bg-gradient-to-br from-[#76B900] via-[#8bda04] to-[#76B900] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+        <span class="w-[310px] h-[350px] rounded rotate-[-40deg] bg-[#121212] absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
         <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white"><h1>kaungkhantcoder@gmail.com ↗</h1></span>
       </a>
 
@@ -39,7 +39,7 @@ export const EmailButton = () => {
           transition={{ duration: 0.3 }}
           className="absolute top-[-1rem] left-1/4 lg:left-[8rem] transform -translate-x-1/2 px-4 py-2 bg-gray-900/90 text-white text-sm rounded-lg shadow-lg border border-gray-700/50 flex items-center"
         >
-          <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+          <span className="inline-block w-2 h-2 bg-white rounded-full mr-2"></span>
           Email copied!
         </motion.div>
       )}
@@ -77,8 +77,8 @@ export const HERO = {
 };
 
 export const EXPERIENCE = [
-  { role: "Machine Learning Engineer", company: "Baymax 3.0", duration: "2025 - Present" },
-  { role: "Junior Backend Developer", company: "Code", duration: "2025 - Present" },
+  { role: "Machine Learning Engineer", company: "Baymax 3.0", duration: "(Internship)" },
+  { role: "Volunteer Web Developer", company: "Unity Of PFI", duration: "2025 - Present" },
   { role: "Volunteer Graphic Designer", company: "Code Mal", duration: "2024 - Present" },
 ];
 
@@ -170,20 +170,29 @@ export const BIO = {
 
 };
 
+import certi1 from "../assets/MLops.png";
+import certi2 from "../assets/TinyML.png";
+import certi3 from "../assets/Baymax3.png";
+
 export const CERTIFICATES = [
   {
-    name: "Certificate Name 1",
-    issuer: "Issuing Organization",
+    name: "MLOps Concepts",
+    issuer: "DataCamp",
     date: "April 2, 2025",
-    image: projectImage1
+    image: certi1
   },
   {
-    name: "Certificate Name 2",
-    issuer: "Issuing Organization",
+    name: "Fundamentals of TinyML",
+    issuer: "HavardX",
     date: "April 2, 2025",
-    image: projectImage2
+    image: certi2
   },
-  // Add more certificates as needed
+  {
+    name: "ML Project Winner",
+    issuer: "Simbolo",
+    date: "January 28, 2025",
+    image: certi3
+  },
 ];
 
 // export const projects = [

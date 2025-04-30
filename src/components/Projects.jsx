@@ -123,7 +123,7 @@ const ProjectCarousel = ({ category, projects }) => {
   };
 
   return (
-    <div className="w-screen p-10 md:px-[4.5rem] lg:px-[12rem] bg-white">
+    <div className="w-screen p-10 md:px-[7rem] lg:px-[15rem] bg-white">
       {/* Section Header */}
       <div className="flex justify-between items-center mb-2">
         <p className="text-left text-[40px] md:text-[50px] text-black uppercase">
@@ -141,18 +141,18 @@ const ProjectCarousel = ({ category, projects }) => {
             <div className="hidden md:flex space-x-2">
               <button
                 onClick={handlePrev}
-                className="p-5 bg-[#76B900] hover:bg-[#66B933] transition"
+                className="p-5 bg-black hover:bg-black/80 transition"
               >
-                <MdArrowBackIosNew className="text-black" />
+                <MdArrowBackIosNew className="text-white" />
               </button>
               <button
                 onClick={handleNext}
-                className="p-5 bg-[#76B900] hover:bg-[#66B933] transition"
+                className="p-5 bg-black hover:bg-black/90 transition"
               >
-                <MdArrowForwardIos className="text-black" />
+                <MdArrowForwardIos className="text-white" />
               </button>
             </div>
-            <div className="bg-[#76B900] w-[100px] md:w-auto rounded-lg p-2 md:p-5 text-center hover:scale-105 transition duration-200 ">
+            <div className="bg-[#121212] w-[100px] md:w-auto rounded-lg p-2 md:p-5 text-center hover:scale-105 transition duration-200 ">
               <h2 className="text-[25px] md:text-[40px]">{projects.length - 1}+</h2>
               <p className="text-[20px] md:text-[20px]">projects</p>
             </div>
@@ -191,7 +191,7 @@ const ProjectCarousel = ({ category, projects }) => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-[#76B900] text-white hover:text-white hover:bg-[#66B933] p-3 rounded-t-none rounded-md text-[10px] md:text-[13px] font-medium"
+                        className="bg-gray-300 text-black hover:text-white hover:bg-gray-700 p-3 rounded-t-none rounded-md text-[10px] md:text-[13px] font-medium"
                       >
                         View on GitHub
                       </a>
@@ -246,7 +246,7 @@ const ProjectCarousel = ({ category, projects }) => {
       >
         <div className="w-full h-[7px] bg-gray-200">
           <div
-            className="h-[7px] bg-[#76B900] transition-all duration-500"
+            className="h-[7px] bg-black transition-all duration-500"
             style={{ width: `${progress}%` }}
           ></div>
         </div>

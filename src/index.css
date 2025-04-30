@@ -19,7 +19,7 @@ html, body {
 
 body {
   font-family: "Oxanium", sans-serif;
-  background: #000; /* Or #fff, depending on your theme */
+  background: #080808; /* Or #fff, depending on your theme */
   color: white; /* Or black */
   overflow-x: hidden;
   user-select: none;

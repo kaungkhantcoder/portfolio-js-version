@@ -64,7 +64,7 @@ const Hero = () => {
         {/* Top Section - Profile Info */}
 
         <div
-          className="relative z-10 text-white bg-black bg-line rounded-2xl p-5 shadow-2xl"
+          className="relative z-10 text-white bg-[#121212] bg-line rounded-2xl p-5 shadow-2xl"
           style={{
             backgroundImage: `url(${mainbg})`, // Replace with your image path
             backgroundSize: "cover",
@@ -73,20 +73,20 @@ const Hero = () => {
           }}
 
         >
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 border border-white/40 bg-white/10 backdrop-blur-[5px] px-5 py-3 rounded-lg gap-12 items-center">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 border border-white/40 bg-white/10 backdrop-blur-[8px] px-5 py-3 rounded-lg gap-12 items-center">
             {/* Text Section */}
             <div className="space-y-5 my-10 md:ml-6 text-center md:text-start">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-md">
                 {HERO.greet}
               </h1>
 
-              <h2 className="text-2xl md:text-5xl font-bold text-[#76B900] drop-shadow-md">
+              <h2 className="text-2xl md:text-5xl font-bold text-[#121212] drop-shadow-md">
                 {HERO.name}
               </h2>
 
-              <div className="inline-block border border-[#76B900] rounded-md px-6 py-3 hover:scale-[1.03] transition-transform shadow-inner">
+              <div className="inline-block border-[2.5px] border-[#121212] rounded-md px-6 py-3 hover:scale-[1.03] transition-transform shadow-inner">
                 <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-white">
-                  <span className="inline-block w-5 h-1 bg-[#76B900] mr-3 rounded"></span>
+                  <span className="inline-block w-5 h-1 bg-[#121212] mr-3 rounded"></span>
                   {HERO.job}
                 </h3>
               </div>
@@ -98,13 +98,13 @@ const Hero = () => {
               {/* Button */}
               <div className="relative mt-6 inline-block">
                 <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-500 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#bbfd48]"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
                 </span>
                 <a
                   href="/cv.pdf"
                   download
-                  className="inline-flex items-center px-6 py-3 bg-[#76B900] hover:bg-white hover:text-black transition-all duration-300 text-sm font-semibold shadow-md"
+                  className="inline-flex items-center px-6 py-3 bg-[#121212] hover:bg-white hover:text-black transition-all duration-300 text-sm font-semibold shadow-md"
                 >
                   Explore My CV
                   <SiReaddotcv className="ml-2 text-base" />
@@ -123,7 +123,7 @@ const Hero = () => {
         <div className="flex justify-center mt-10 md:mt-16">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             strokeWidth={2.5} stroke="currentColor"
-            className="w-12 h-12 bg-white/10 animate-bounce border border-white/50 rounded-full p-3 text-[#76B900]"
+            className="w-12 h-12 bg-white/10 animate-bounce border border-white/50 rounded-full p-3 text-white"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
           </svg>
@@ -141,7 +141,6 @@ const Hero = () => {
             initial="rest"
             className="relative p-4 md:p-6 rounded-xl bg-white border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
               <h3 className="text-lg md:text-xl font-semibold text-black mb-2">
                 <span className="inline-block w-8 h-1 bg-green-400 mr-2"></span> About Me
@@ -157,9 +156,8 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-gradient-to-b from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
+            className="relative p-6 md:p-8 rounded-xl bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-red-500/10 via-transparent to-pink-500/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
                 <span className="inline-block w-8 h-1 bg-red-400 mr-2"></span> Experience
@@ -183,9 +181,9 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-gradient-to-b from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
+            className="relative p-6 md:p-8 rounded-xl bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 via-transparent to-pink-500/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
                 <span className="inline-block w-8 h-1 bg-purple-400 mr-2"></span> Interest
@@ -214,9 +212,8 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-gradient-to-b from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
+            className="relative p-6 md:p-8 rounded-xl bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/10 via-transparent to-green-500/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
                 <span className="inline-block w-8 h-1 bg-teal-400 mr-2"></span> Education
@@ -241,7 +238,6 @@ const Hero = () => {
             initial="rest"
             className="relative p-6 md:p-8 rounded-xl border bg-gray-700/20 border-gray-200/30 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-gray-900/20 via-blue-500/10 to-blue-500/20 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
                 <span className="inline-block w-8 h-1 bg-white mr-2"></span> Tech Stack
@@ -269,9 +265,8 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 rounded-xl md:p-8 bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 "
+            className="relative p-6 rounded-xl md:p-8 bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 "
           >
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 via-transparent to-blue-300/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
                 <span className="inline-block w-8 h-1 bg-blue-400 mr-2"></span> Extra Capabilities
@@ -299,16 +294,15 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-4 rounded-xl bg-gradient-to-b from-gray-900/80 to-black/90 border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
+            className="relative p-4 rounded-xl bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/10 via-transparent to-yellow-500/10 opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
             <div className="relative z-10">
               <h3 className="text-xl font-semibold text-white mb-4">
-                <span className="inline-block w-8 h-1 bg-orange-500 mr-2"></span> Certificates
+                <span className="inline-block w-8 h-1 bg-orange-500 mr-2"></span> Achievements
               </h3>
 
               <div className="relative overflow-hidden">
-                <div className="w-full  h-full md:h-[260px]">
+                <div className="w-full h-[260px]">
                   <motion.div
                     key={currentCertIndex} // Key changes trigger animation
                     initial={{ opacity: 0 }}
@@ -320,7 +314,7 @@ const Hero = () => {
                     <img
                       src={CERTIFICATES[currentCertIndex].image}
                       alt={CERTIFICATES[currentCertIndex].name}
-                      className="w-full h-full object-cover rounded-md mb-2"
+                      className="w-full h-[160px] object-cover rounded-md mb-2"
                     />
                     <div className="grid grid-cols-2">
                       <div className="text-start">
