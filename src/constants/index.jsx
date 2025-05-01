@@ -148,21 +148,6 @@ export const STACKS = [
   { id: 3, icon: FaPython },
 ]
 
-const Description = [
-  {
-    description1:
-      `This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
-      This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
-      This is my application.
-      This is my application, This is making in one day, You can chat with our bot, that's excaetly, working on you machine.
-      This is making in one day, You can chat with our bot, that's excaetly,`
-  },
-  {
-    description2:
-      "This is a project for the subject of (Introduction to Artificial Intelligence) at Simbolo. The project is created by: Simbolo's Farmers."
-  },
-]
-
 
 export const BIO = {
   main_text: "Hi! This is Kaung Khant, and also know as Koder Grit.",

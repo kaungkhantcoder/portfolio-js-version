@@ -54,7 +54,7 @@ const Hero = () => {
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 border border-white/40 bg-white/10 backdrop-blur-[8px] px-5 py-3 rounded-lg gap-12 items-center">
             {/* Text Section */}
             <div className="space-y-5 my-10 md:ml-6 text-center md:text-start">
-              <h1 className="text-1xl md:text-3xl lg:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-md">
+              <h1 className="text-1xl md:text-3xl font-extrabold tracking-tight leading-tight drop-shadow-md">
                 {HERO.greet}
               </h1>
 
@@ -70,10 +70,10 @@ const Hero = () => {
               </div>
 
               <p className="text-sm md:text-xl font-medium text-white/80">
-                {HERO.field.split("\n").map((line, i)=> (
+                {HERO.field.split("\n").map((line, i) => (
                   <span key={i} className="border-b-2 border-black/30">
                     {line}
-                    <br/>
+                    <br />
                   </span>
                 ))}
               </p>
@@ -162,7 +162,7 @@ const Hero = () => {
               <div className="space-y-4">
                 {EXPERIENCE.map((exp, index) => (
                   <div key={index} className="text-sm md:text-base text-gray-300">
-                    <p className="font-medium">{exp.role}</p>
+                    <h1 className="font-medium">{exp.role}</h1>
                     <p>{exp.company}</p>
                     <p className="text-gray-400">{exp.duration}</p>
                   </div>
@@ -233,9 +233,16 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl border bg-gray-700/20 border-gray-200/30 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
+            className="relative rounded-2xl border-2 bg-black border-white/40 backdrop-blur-lg shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
           >
-            <div className="relative z-10">
+            {/* macOS style title bar */}
+            <div className="flex items-center space-x-2 p-3 bg-[#121212] rounded-t-2xl">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+
+            <div className="relative z-10 p-6 md:p-8">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
                 <span className="inline-block w-8 h-1 bg-white mr-2"></span> Tech Stack
               </h3>
