@@ -191,7 +191,7 @@ const ProjectCarousel = ({ category, projects }) => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gray-300 text-black hover:text-white hover:bg-gray-700 p-3 rounded-t-none rounded-md text-[10px] md:text-[13px] font-medium"
+                        className="bg-gray-300 text-black hover:text-white hover:bg-[#121212] p-3 rounded-t-none rounded-md text-[10px] md:text-[13px] font-medium"
                       >
                         View on GitHub
                       </a>

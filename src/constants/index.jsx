@@ -70,9 +70,9 @@ export const NAVIGATION_LINKS = [
 
 export const HERO = {
   name: "This is Kaung Khant",
-  username: "Software Development | Machine Learning",
+  field: "Software Development\nMachine Learning",
   greet: "Hello there!",
-  job: "Technophile",
+  job: "Programmer",
   ph_num: "+959976126328",
 };
 

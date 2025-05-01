@@ -1,16 +1,10 @@
 import { HERO, SKILLS, INTEREST, otherskills, EmailButton, EXPERIENCE, EDUCATION, CERTIFICATES, projects } from "../constants";
-import { FaReddit, FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { CgMail } from "react-icons/cg";
 import { SiReaddotcv } from "react-icons/si";
 import { BIO } from "../constants";
-import lottie from "lottie-web";
 import { useEffect, useRef, useState } from "react";
 import mainbg from "../assets/computer_keyboard_books.png";
-
-
-
-const lottieUrl = "https://lottie.host/b35aeb62-f293-4a28-b4b8-2d21e9771d35/5WMyAHIh6u.json"
+import profile_card from "../assets/profile_card.png";
 
 const Hero = () => {
   const boxVariants = {
@@ -38,22 +32,6 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, []);
 
-  // Ref for the Lottie container
-  const lottieContainer = useRef(null);
-
-  // Load Lottie animation when component mounts
-  useEffect(() => {
-    const anim = lottie.loadAnimation({
-      container: lottieContainer.current,
-      renderer: "svg", // Can also use "canvas" or "html"
-      loop: true,
-      autoplay: true,
-      path: lottieUrl, // URL to the Lottie JSON file
-    });
-
-    // Cleanup on unmount
-    return () => anim.destroy();
-  }, []); // Empty dependency array means it runs once on mount
 
   return (
     <section
@@ -66,7 +44,7 @@ const Hero = () => {
         <div
           className="relative z-10 text-white bg-[#121212] bg-line rounded-2xl p-5 shadow-2xl"
           style={{
-            backgroundImage: `url(${mainbg})`, // Replace with your image path
+            backgroundImage: `url(${mainbg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -76,23 +54,28 @@ const Hero = () => {
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 border border-white/40 bg-white/10 backdrop-blur-[8px] px-5 py-3 rounded-lg gap-12 items-center">
             {/* Text Section */}
             <div className="space-y-5 my-10 md:ml-6 text-center md:text-start">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-md">
+              <h1 className="text-1xl md:text-3xl lg:text-6xl font-extrabold tracking-tight leading-tight drop-shadow-md">
                 {HERO.greet}
               </h1>
 
-              <h2 className="text-2xl md:text-5xl font-bold text-[#121212] drop-shadow-md">
+              <h2 className="text-2xl md:text-4xl font-bold text-[#ffffff] drop-shadow-md">
                 {HERO.name}
               </h2>
 
-              <div className="inline-block border-[2.5px] border-[#121212] rounded-md px-6 py-3 hover:scale-[1.03] transition-transform shadow-inner">
+              <div className="inline-block bg-[#121212] rounded-md px-6 py-3 hover:scale-[1.03] transition-transform drop-shadow-lg shadow-inner">
                 <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-white">
-                  <span className="inline-block w-5 h-1 bg-[#121212] mr-3 rounded"></span>
+                  <span className="inline-block w-5 h-1 bg-white mr-3 rounded"></span>
                   {HERO.job}
                 </h3>
               </div>
 
-              <p className="text-md md:text-xl font-medium text-white/80">
-                {HERO.username}
+              <p className="text-sm md:text-xl font-medium text-white/80">
+                {HERO.field.split("\n").map((line, i)=> (
+                  <span key={i} className="border-b-2 border-black/30">
+                    {line}
+                    <br/>
+                  </span>
+                ))}
               </p>
 
               {/* Button */}
@@ -112,8 +95,22 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Animation Section */}
-            <div ref={lottieContainer} className="md:w-full md:pl-10 md:h-[400px]" />
+            {/* Profile_Card Section */}
+            <div className="w-full">
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="hidden md:flex w-full h-[300px]"
+                style={{
+                  backgroundImage: `url(${profile_card})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+
+              </motion.div>
+            </div>
+
           </div>
         </div>
 
@@ -151,7 +148,7 @@ const Hero = () => {
             <div className="absolute top-4 right-4 w-10 h-10 border-t-2 border-r-2 border-green-400/30 rounded-tr-xl"></div>
           </motion.div>
 
-          {/* Box 3 - Social Media (Middle Right, Square) */}
+          {/* Box 2 - Experience (Middle Right, Square) */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
@@ -176,7 +173,7 @@ const Hero = () => {
           </motion.div>
 
 
-          {/* Box 4 - Interest */}
+          {/* Box 3 - Interest */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
@@ -207,7 +204,7 @@ const Hero = () => {
             <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-purple-400/30 rounded-bl-xl"></div>
           </motion.div>
 
-          {/* Box 5 - Education (Bottom Right, Wide) */}
+          {/* Box 4 - Education */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
@@ -231,7 +228,7 @@ const Hero = () => {
 
 
 
-          {/* Box 6 - Tech Stack (Bottom Right, Wide) */}
+          {/* Box 5 - Tech Stack */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
@@ -261,6 +258,8 @@ const Hero = () => {
             <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-gray-800 rounded-bl-xl"></div>
           </motion.div>
 
+
+          {/* Box 6 - Other Skills */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
@@ -290,6 +289,7 @@ const Hero = () => {
             <div className="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-blue-400/30 rounded-br-xl"></div>
           </motion.div>
 
+          {/* Box 7 - Certificates */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
