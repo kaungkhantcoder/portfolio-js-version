@@ -141,18 +141,18 @@ const ProjectCarousel = ({ category, projects }) => {
             <div className="hidden md:flex space-x-2">
               <button
                 onClick={handlePrev}
-                className="p-5 bg-black hover:bg-black/80 transition"
+                className="p-5 bg-gradient-to-t from-black to-black/80 hover:bg-black/80 transition"
               >
                 <MdArrowBackIosNew className="text-white" />
               </button>
               <button
                 onClick={handleNext}
-                className="p-5 bg-black hover:bg-black/90 transition"
+                className="p-5 bg-gradient-to-tr from-black to-black/80 hover:bg-black/90 transition"
               >
                 <MdArrowForwardIos className="text-white" />
               </button>
             </div>
-            <div className="bg-[#121212] w-[100px] md:w-auto rounded-lg p-2 md:p-5 text-center hover:scale-105 transition duration-200 ">
+            <div className="bg-gradient-to-tr from-black to-black/80 w-[100px] md:w-auto rounded-lg p-2 md:p-5 text-center hover:scale-105 transition duration-200 ">
               <h2 className="text-[25px] md:text-[40px]">{projects.length - 1}+</h2>
               <p className="text-[20px] md:text-[20px]">projects</p>
             </div>
@@ -191,7 +191,7 @@ const ProjectCarousel = ({ category, projects }) => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-gray-300 text-black hover:text-white hover:bg-[#121212] p-3 rounded-t-none rounded-md text-[10px] md:text-[13px] font-medium"
+                        className="bg-gray-300 text-black hover:text-white hover:bg-gradient-to-r from-gray-800 to-black p-3 rounded-t-none rounded-md text-[10px] md:text-[13px] font-medium"
                       >
                         View on GitHub
                       </a>
@@ -216,7 +216,7 @@ const ProjectCarousel = ({ category, projects }) => {
                               href={contributor.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex mt-2 items-center mb-2 p-2 border border-white rounded-lg bg-gray-900/70 text-white font-medium text-[11px] shadow-sm transition-all duration-300 hover:bg-gray-900 mr-2"
+                              className="inline-flex mt-2 items-center mb-2 p-2 rounded-md bg-gradient-to-r from-gray-800 to-black text-white font-medium text-[11px] shadow-sm transition-all hover:scale-105 duration-200 hover:border-gray-800 hover:from-black hover:to-gray-900 mr-2"
                             >
                               <FaGithub className="mr-2 text-lg" />
                               {contributor.name}

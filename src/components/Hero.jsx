@@ -62,7 +62,7 @@ const Hero = () => {
                 {HERO.name}
               </h2>
 
-              <div className="inline-block bg-[#121212] rounded-md px-6 py-3 hover:scale-[1.03] transition-transform drop-shadow-lg shadow-inner">
+              <div className="inline-block bg-gradient-to-tr from-black to-black/10 rounded-md px-6 py-3 hover:scale-[1.03] transition-transform drop-shadow-lg shadow-inner">
                 <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-white">
                   <span className="inline-block w-5 h-1 bg-white mr-3 rounded"></span>
                   {HERO.job}
@@ -136,7 +136,7 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-4 md:p-6 rounded-xl bg-white border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
+            className="relative p-4 md:p-6 rounded-xl bg-white border border-gray-700/50 overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
           >
             <div className="relative z-10">
               <h3 className="text-lg md:text-xl font-semibold text-black mb-2">
@@ -172,14 +172,14 @@ const Hero = () => {
             <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-red-400/30 rounded-bl-xl"></div>
           </motion.div>
 
-
           {/* Box 3 - Interest */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
+            className="relative p-6 md:p-8 rounded-xl bg-[#121212] border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
           >
+
 
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
@@ -253,7 +253,7 @@ const Hero = () => {
                     <motion.div
                       key={index}
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="flex items-center space-x-2 bg-gray-600/30 hover:bg-gray-900/90 p-3 rounded-lg border border-white/20 hover:border-white hover:font-medium transition-colors"
+                      className="flex items-center space-x-2  hover:bg-gradient-to-tr from-[#313131] to-black p-3 rounded-lg border border-white/40 hover:border-white hover:font-medium transition-colors"
                     >
                       <Icon className="text-xl md:text-2xl mr-2" />
                       <p className="text-xs md:text-sm">{SKILLS.name}</p>

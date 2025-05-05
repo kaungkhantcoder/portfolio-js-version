@@ -16,23 +16,23 @@ const ContactMe = () => {
             <p className="text-sm text-gray-400 mb-1">Contact me at:</p>
             <EmailButton />
           </div>
-          <div className="flex space-x-6 mt-5 justify-start">
-            <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white/50">
+          <div className="flex space-x-6 mt-5 text-white/50 justify-start">
+            <a href="https://reddit.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white">
               <FaReddit />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white/50">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white">
               <FaFacebook />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white/50">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white">
               <FaSquareXTwitter />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white/50">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white">
               <FaLinkedin />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white/50">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white">
               <FaTelegram />
             </a>
-            <a href="https://github.com/kaungkhantcoder" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white/50">
+            <a href="https://github.com/kaungkhantcoder" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-white">
               <FaGithub />
             </a>
           </div>

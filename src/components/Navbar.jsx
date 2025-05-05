@@ -59,7 +59,7 @@ const Navbar = () => {
                 <a
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
-                  className="rounded relative block items-center text-center px-2 py-2 cursor-pointer active:shadow-none shadow-lg bg-[#121212] hover:font-bold text-white"
+                  className="rounded relative block items-center text-center px-2 py-2 cursor-pointer active:shadow-none shadow-lg bg-gradient-to-tr from-black to-black/80 hover:font-bold text-white"
                 >
                   <span class="relative">{item.label}</span>
                 </a>
