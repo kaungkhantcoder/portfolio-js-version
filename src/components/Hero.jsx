@@ -62,7 +62,7 @@ const Hero = () => {
                 {HERO.name}
               </h2>
 
-              <div className="inline-block bg-gradient-to-tr from-black to-black/10 rounded-md px-6 py-3 hover:scale-[1.03] transition-transform drop-shadow-lg shadow-inner">
+              <div className="inline-block bg-gradient-to-tr from-[#1a1a1b] via-[#0c0c0c] to-black rounded-md px-6 py-3 hover:scale-[1.03] transition-transform drop-shadow-lg shadow-inner">
                 <h3 className="text-xl md:text-2xl font-semibold tracking-wide text-white">
                   <span className="inline-block w-5 h-1 bg-white mr-3 rounded"></span>
                   {HERO.job}
@@ -136,16 +136,23 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-4 md:p-6 rounded-xl bg-white border border-gray-700/50 overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
+            className="relative rounded-2xl bg-gradient-to-tr from-[#111010] via-[#131212] to-[#201c1c]
+                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
           >
-            <div className="relative z-10">
-              <h3 className="text-lg md:text-xl font-semibold text-black mb-2">
+            {/* macOS style title bar */}
+            <div className="flex items-center space-x-2 p-3 bg-[#0c0c0c] rounded-t-2xl">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div className="relative z-10  p-4 md:p-6">
+              <h3 className="text-lg md:text-xl font-semibold mb-2">
                 <span className="inline-block w-8 h-1 bg-green-400 mr-2"></span> About Me
               </h3>
-              <h3 className="text-md font-regular text-left mt-6 text-black">{BIO.main_text || "No main text available"}</h3>
-              <h1 className="text-[14px] md:text-[16px] font-regular text-left mt-6 text-black">{BIO.description || "No main text available"}</h1>
+              <h3 className="text-md font-regular text-left mt-6">{BIO.main_text || "No main text available"}</h3>
+              <h1 className="text-[15px] md:text-[17px] font-regular text-left mt-6">{BIO.description || "No main text available"}</h1>
             </div>
-            <div className="absolute top-4 right-4 w-10 h-10 border-t-2 border-r-2 border-green-400/30 rounded-tr-xl"></div>
+            <div className="absolute bottom-4 right-4 w-10 h-10 border-b-2 border-r-2 border-green-400/30 rounded-br-xl"></div>
           </motion.div>
 
           {/* Box 2 - Experience (Middle Right, Square) */}
@@ -153,7 +160,8 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
+            className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#252424] via-[#0a0a0a] to-[#0f0e0e]
+                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
           >
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
@@ -177,7 +185,8 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-[#121212] border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
+            className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-tr from-[#0a0a0a] via-[#252424] to-[#0f0e0e]
+                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
           >
 
 
@@ -204,12 +213,14 @@ const Hero = () => {
             <div className="absolute bottom-4 left-4 w-12 h-12 border-b-2 border-l-2 border-purple-400/30 rounded-bl-xl"></div>
           </motion.div>
 
+
           {/* Box 4 - Education */}
           <motion.div
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-xl bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
+            className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-tl from-[#0a0a0a] via-[#1b1b1b] to-[#0f0e0e]
+                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
           >
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
@@ -233,10 +244,11 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative rounded-2xl border-2 bg-black border-white/40 backdrop-blur-lg shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
+            className="relative rounded-2xl bg-gradient-to-tr from-[#0a0a0a] via-[#161616] to-[#0f0e0e]
+                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
           >
             {/* macOS style title bar */}
-            <div className="flex items-center space-x-2 p-3 bg-[#121212] rounded-t-2xl">
+            <div className="flex items-center space-x-2 p-3 bg-[#0c0c0c] rounded-t-2xl">
               <div className="w-3 h-3 bg-red-500 rounded-full"></div>
               <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
               <div className="w-3 h-3 bg-green-500 rounded-full"></div>
@@ -271,7 +283,8 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 rounded-xl md:p-8 bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-4 md:row-span-1 "
+            className="relative p-6 rounded-2xl md:p-8 bg-gradient-to-bl from-[#181717] via-[#0f0f0f] to-[#252323]
+                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-4 md:row-span-1 "
           >
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
@@ -301,7 +314,8 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-4 rounded-xl bg-black border border-gray-700/50 shadow-lg overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
+            className="relative p-4 rounded-2xl bg-gradient-to-tr from-[#1d1c1c] via-[#181717] to-[#0f0e0e]
+                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
           >
             <div className="relative z-10">
               <h3 className="text-xl font-semibold text-white mb-4">
