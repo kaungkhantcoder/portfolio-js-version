@@ -71,7 +71,7 @@ const Hero = () => {
 
               <p className="text-sm md:text-xl font-medium text-white/80">
                 {HERO.field.split("\n").map((line, i) => (
-                  <span key={i} className="border-b-2 border-black/30">
+                  <span key={i} className="">
                     {line}
                     <br />
                   </span>
@@ -185,7 +185,7 @@ const Hero = () => {
             variants={boxVariants}
             whileHover="hover"
             initial="rest"
-            className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-tr from-[#0a0a0a] via-[#252424] to-[#0f0e0e]
+            className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-bl from-[#252424] via-[#0a0a0a] to-[#0f0e0e]
                         border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
           >
 
@@ -194,16 +194,16 @@ const Hero = () => {
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
                 <span className="inline-block w-8 h-1 bg-purple-400 mr-2"></span> Interest
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-4">
                 {INTEREST.map((INTEREST, index) => {
                   const Icon = INTEREST.icon;
                   return (
                     <motion.div
                       key={index}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="flex items-center  bg-black/50 p-3 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-colors"
+                      whileHover={{ scale: 1, rotate: 5 }}
+                      className="flex items-center bg-gradient-to-tr from-[#121212] to-[#212121] p-3 rounded-lg hover:border border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-colors"
                     >
-                      <Icon className="text-xl md:text-2xl mr-2 text-gray-300 hover:text-purple-400" />
+                      <Icon className="text-xl md:text-2xl mr-2 text-white" />
                       <p className="text-xs md:text-sm text-gray-300 hover:text-white">{INTEREST.name}</p>
                     </motion.div>
                   );
@@ -290,16 +290,16 @@ const Hero = () => {
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
                 <span className="inline-block w-8 h-1 bg-blue-400 mr-2"></span> Extra Capabilities
               </h3>
-              <div className="flex flex-wrap gap-2 md:gap-3">
+              <div className="flex flex-wrap gap-2 md:gap-4">
                 {otherskills.map((otherskills, index) => {
                   const Icon = otherskills.icon;
                   return (
                     <motion.div
                       key={index}
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="flex items-center space-x-2 bg-black/50 p-3 rounded-lg border border-blue-500/20 hover:border-blue-500/50 transition-colors"
+                      whileHover={{ scale: 1, rotate: 5 }}
+                      className="flex items-center space-x-2 bg-gradient-to-tr from-[#121212] to-[#212121] p-3 rounded-lg hover:border border-white/50 shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-colors"
                     >
-                      <Icon className="text-xl md:text-2xl text-gray-300 hover:text-blue-400" />
+                      <Icon className="text-xl md:text-2xl text-gray-300" />
                       <p className="text-xs md:text-sm text-gray-300 hover:text-white">{otherskills.name}</p>
                     </motion.div>
                   );
@@ -330,7 +330,7 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full bg-gray-500/20 drop-shadow-lg rounded-lg p-3"
+                    className="w-full bg-gradient-to-br from-[#222121] via-[#181717] to-[#221f1f] shadow-[0_3px_10px_rgba(0,0,0,0.4)] rounded-lg p-3"
                   >
                     <img
                       src={CERTIFICATES[currentCertIndex].image}
