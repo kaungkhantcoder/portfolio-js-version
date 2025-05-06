@@ -183,7 +183,7 @@ const ProjectCarousel = ({ category, projects }) => {
                 {pageProjects.map((project) => (
                   <div
                     key={project.id}
-                    className="bg-white drop-shadow-md flex-shrink-0 relative hover:scale-[1.02] transition duration-200"
+                    className="bg-white drop-shadow-md hover:shadow-[0_4px_8px_rgba(0,0,0,0.4)] flex-shrink-0 relative hover:scale-[1.02] transition duration-200"
                   >
                     {/* Buttons above the card */}
                     <div className="absolute flex">

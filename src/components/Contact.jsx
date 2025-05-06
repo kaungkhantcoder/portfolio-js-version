@@ -5,7 +5,7 @@ const ContactMe = () => {
   return (
     <section className="w-screen bg-white ">
       <div className="mb-10"></div>
-      <div className="bg-gradient-to-br from-[#161616] via-[#121212] to-black rounded-t-[30px] text-white ">
+      <div className="bg-gradient-to-tr from-[#272525] via-[#111010] to-[#201c1c] rounded-t-[30px] text-white ">
         <div className="w-screen py-[65px] px-6 md:px-24 lg:px-[11rem]" id="contact">
           <p className="text-sm text-white mb-4">+ Contact Me</p>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
