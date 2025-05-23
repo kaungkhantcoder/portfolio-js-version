@@ -44,7 +44,7 @@ const Hero = () => {
         <div
           className="relative z-10 text-white bg-[#121212] bg-line rounded-2xl p-5 shadow-2xl"
           style={{
-            backgroundImage: `url(${mainbg})`,
+            backgroundImage: `url(${"https://4kwallpapers.com/images/walls/thumbs_3t/5658.jpg"})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

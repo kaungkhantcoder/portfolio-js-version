@@ -126,7 +126,7 @@ const ProjectCarousel = ({ category, projects }) => {
     <div className="w-screen p-10 md:px-[7rem] lg:px-[15rem] bg-white">
       {/* Section Header */}
       <div className="flex justify-between items-center mb-2">
-        <p className="text-left text-[40px] md:text-[50px] text-black uppercase">
+        <p className="text-left text-[40px] font-bold md:text-[50px] bg-gradient-to-r from-orange-600 to-yellow-400 bg-clip-text text-transparent uppercase">
           {category}
         </p>
 
