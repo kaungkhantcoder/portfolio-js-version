@@ -44,7 +44,7 @@ const Hero = () => {
         <div
           className="relative z-10 text-white bg-[#121212] bg-line rounded-2xl p-5 shadow-2xl"
           style={{
-            backgroundImage: `url(${"https://4kwallpapers.com/images/walls/thumbs_3t/5658.jpg"})`,
+            backgroundImage: `url(${"https://4kwallpapers.com/images/walls/thumbs_3t/1442.jpg"})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -137,7 +137,7 @@ const Hero = () => {
             whileHover="hover"
             initial="rest"
             className="relative rounded-2xl bg-gradient-to-tr from-[#111010] via-[#131212] to-[#201c1c]
-                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
+                        border border-[#2a2a2a]  overflow-hidden col-span-1 md:col-span-4 md:row-span-1"
           >
             {/* macOS style title bar */}
             <div className="flex items-center space-x-2 p-3 bg-[#0c0c0c] rounded-t-2xl">
@@ -161,7 +161,7 @@ const Hero = () => {
             whileHover="hover"
             initial="rest"
             className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#252424] via-[#0a0a0a] to-[#0f0e0e]
-                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
+                        border border-[#2a2a2a] overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
           >
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
@@ -186,7 +186,7 @@ const Hero = () => {
             whileHover="hover"
             initial="rest"
             className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-bl from-[#252424] via-[#0a0a0a] to-[#0f0e0e]
-                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
+                        border border-[#2a2a2a] overflow-hidden col-span-1 md:col-span-2 md:row-span-2"
           >
 
 
@@ -220,7 +220,7 @@ const Hero = () => {
             whileHover="hover"
             initial="rest"
             className="relative p-6 md:p-8 rounded-2xl bg-gradient-to-tl from-[#0a0a0a] via-[#1b1b1b] to-[#0f0e0e]
-                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
+                        border border-[#2a2a2a] overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
           >
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
@@ -245,7 +245,7 @@ const Hero = () => {
             whileHover="hover"
             initial="rest"
             className="relative rounded-2xl bg-gradient-to-tr from-[#0a0a0a] via-[#161616] to-[#0f0e0e]
-                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
+                        border border-[#2a2a2a] overflow-hidden col-span-1 md:col-span-4 md:row-span-1" id="skills"
           >
             {/* macOS style title bar */}
             <div className="flex items-center space-x-2 p-3 bg-[#0c0c0c] rounded-t-2xl">
@@ -284,7 +284,7 @@ const Hero = () => {
             whileHover="hover"
             initial="rest"
             className="relative p-6 rounded-2xl md:p-8 bg-gradient-to-bl from-[#181717] via-[#0f0f0f] to-[#252323]
-                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-4 md:row-span-1 "
+                        border border-[#2a2a2a] overflow-hidden col-span-1 md:col-span-4 md:row-span-1 "
           >
             <div className="relative z-10">
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
@@ -315,7 +315,7 @@ const Hero = () => {
             whileHover="hover"
             initial="rest"
             className="relative p-4 rounded-2xl bg-gradient-to-tr from-[#1d1c1c] via-[#181717] to-[#0f0e0e]
-                        border border-[#2a2a2a] shadow-[0_4px_24px_rgba(0,0,0,0.4)] overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
+                        border border-[#2a2a2a] overflow-hidden col-span-1 md:col-span-2 md:row-span-1"
           >
             <div className="relative z-10">
               <h3 className="text-xl font-semibold text-white mb-4">
