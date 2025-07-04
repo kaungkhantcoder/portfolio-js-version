@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NAVIGATION_LINKS } from "../constants/index.jsx";
 import { motion } from "framer-motion";
-import mainbg from "../assets/keyboard_books.png";
+// import mainbg from "https://4kwallpapers.com/images/walls/thumbs_3t/19871.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +48,13 @@ const Navbar = () => {
           <span className="inline-block w-[3rem] h-1 bg-[#121212] ml-1.5 my-3"></span>
           <ul className="grid grid-cols-2 gap-4">
             <div className="col-span-2 bg-white drop-shadow-xl rounded-md shadow-lg w-full p-[5px]">
-              <img className="w-full object-cover rounded-md h-[50px]" src={mainbg} />
+              <img className="w-full rounded-md border h-[50px]"
+                style={{
+                  backgroundImage: `url(${"https://4kwallpapers.com/images/walls/thumbs_2t/17664.jpg"})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }} />
 
             </div>
 
