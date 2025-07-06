@@ -97,7 +97,7 @@ const Hero = () => {
             {/* Profile_Card Section */}
             <div className="w-full">
               <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileHover={{ scale: 1.1 }}
                 className="hidden md:flex w-full h-[300px]"
                 style={{
                   backgroundImage: `url(${profile_card})`,
