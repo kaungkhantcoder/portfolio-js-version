@@ -43,7 +43,7 @@ const Hero = () => {
         <div
           className="relative z-10 text-white bg-[#121212] bg-line rounded-2xl border-[5px] border-white p-5 shadow-2xl"
           style={{
-            backgroundImage: `url(${"https://4kwallpapers.com/images/walls/thumbs_3t/466.jpg"})`,
+            backgroundImage: `url(${"https://4kwallpapers.com/images/walls/thumbs_3t/5666.jpg"})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
