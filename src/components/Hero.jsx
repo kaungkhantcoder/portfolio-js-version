@@ -41,7 +41,7 @@ const Hero = () => {
         {/* Top Section - Profile Info */}
 
         <div
-          className="relative z-10 text-white bg-[#121212] bg-line rounded-2xl p-5 shadow-2xl"
+          className="relative z-10 text-white bg-[#121212] bg-line rounded-2xl border-[5px] border-white p-5 shadow-2xl"
           style={{
             backgroundImage: `url(${"https://4kwallpapers.com/images/walls/thumbs_3t/466.jpg"})`,
             backgroundSize: "cover",
@@ -119,7 +119,7 @@ const Hero = () => {
         <div className="flex justify-center mt-10 md:mt-16">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             strokeWidth={2.5} stroke="currentColor"
-            className="w-12 h-12 bg-white/10 animate-bounce border border-white/50 rounded-full p-3 text-white"
+            className="w-12 h-12 bg-black/10 animate-bounce border border-black/50 rounded-full p-3 text-black"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
           </svg>
