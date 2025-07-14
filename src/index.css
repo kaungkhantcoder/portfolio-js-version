@@ -18,8 +18,8 @@ html, body {
 
 body {
   font-family: "Inter", sans-serif;
-  background: #f4f6ff; /* Or #fff, depending on your theme */
-  color: white; /* Or black */
+  background: #f4f6ff;
+  color: white;
   overflow-x: hidden;
   user-select: none;
 }
