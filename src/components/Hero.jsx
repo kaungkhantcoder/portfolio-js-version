@@ -113,8 +113,6 @@ const Hero = () => {
           </div>
         </div>
 
-
-
         {/* Scroll Down Icon */}
         <div className="flex justify-center mt-10 md:mt-16">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -124,8 +122,6 @@ const Hero = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
           </svg>
         </div>
-
-
 
         {/* Bento Grid - Improved Layout */}
         <div id="about" className="grid grid-cols-1 md:grid-cols-6  grid-rows-1 md:grid-rows-1 gap-3 md:gap-6 w-full min-h-[600px]">
