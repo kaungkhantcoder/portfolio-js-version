@@ -11,6 +11,7 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  
   const handleLinkClick = (e, href) => {
     e.preventDefault();
     const targetElement = document.querySelector(href);
